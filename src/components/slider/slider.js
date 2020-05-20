@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
-import styled, { css } from 'styled-components'
+import { css } from 'styled-components'
+import { useStateValue } from '../../hooks/context'
 import SliderContent from './sliderContent'
 import Slide from './slide'
 import SliderDisplay from './slideDisplay'
@@ -17,7 +18,8 @@ const sliderCSS = css`
 const getWidth = () => typeof window !== 'undefined' && window.innerWidth
 
 const Slider = props => {
-  const { slides, displays } = props
+  const { slides } = useStateValue()
+  const { displays } = props
 
   const firstSlide = slides[0]
   const secondSlide = slides[1]
@@ -111,9 +113,6 @@ const Slider = props => {
         transition={transition}
         width={getWidth() * _slides.length}
       >
-        <TestAnimate>
-          <p>Test animations utils it shows up</p>
-        </TestAnimate>
         {_slides.map((_slide, i) => (
           <Slide
             width={getWidth()}
@@ -126,21 +125,10 @@ const Slider = props => {
 
       <Arrow direction='left' handleClick={prevSlide} />
       <Arrow direction='right' handleClick={nextSlide} />
-      <Dots slides={props.slides} activeSlide={activeSlide} />
+      <Dots slides={slides} activeSlide={activeSlide} />
       <SliderDisplay activeSlide={activeSlide} displays={displays} />
     </div>
   )
 }
-
-const TestAnimate = styled.div`
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  font-size: 40px;
-  width: 100%;
-  p {
-    color: #ffffff;
-  }
-`
 
 export default Slider

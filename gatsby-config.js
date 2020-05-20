@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 module.exports = {
   siteMetadata: {
     title: 'Kaira Luchi',
@@ -27,9 +29,15 @@ module.exports = {
         icon: 'src/images/small-logo.png' // This path is relative to the root of the site.
       }
     },
-    'gatsby-plugin-styled-components'
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    'gatsby-plugin-styled-components',
+    {
+      resolve:`gatsby-source-cloudinary`,
+      options: {
+        cloudName: process.env.CLOUDINARY_CLOUD_NAME,
+        apiKey: process.env.CLOUDINARY_API_KEY,
+        apiSecret: process.env.CLOUDINARY_API_SECRET,
+        resourceType: `image`
+      }
+    }
   ]
 }

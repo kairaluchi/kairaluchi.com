@@ -1,11 +1,5 @@
 import React from 'react'
 import Slider from './slider'
-import slideOne from '../../images/slides/slide1.jpeg'
-import slideTwo from '../../images/slides/slide2.jpeg'
-import slideThree from '../../images/slides/slide3.jpeg'
-import slideFour from '../../images/slides/slide4.jpeg'
-
-const images = [slideOne, slideTwo, slideThree, slideFour]
 
 const displays = [
   {
@@ -30,4 +24,4 @@ const displays = [
   }
 ]
 
-export default () => <Slider slides={images} autoPlay={5} displays={displays} />
+export default () => <Slider autoPlay={5} displays={displays} />

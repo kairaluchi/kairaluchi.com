@@ -5,6 +5,7 @@ import HeaderTop from './headerTop'
 import HeaderUpper from './headerUpper'
 import HeaderLower from './headerLower'
 import HeaderBounce from './headerBounce'
+import { useStateValue } from '../../hooks/context'
 
 const MainHeader = styled.div`
   position: relative;
@@ -38,7 +39,8 @@ const menu = [
   }
 ]
 
-const Header = ({ siteTitle, path }) => {
+const Header = ({ path }) => {
+  const { siteTitle } = useStateValue()
   const [bounceHeaderVisibility, setBounceHeaderVisibility] = useState(false)
   const [scrollPosition, setScrollPosition] = useState(0)
   const mainHeaderEl = useRef(null)
@@ -73,7 +75,6 @@ const Header = ({ siteTitle, path }) => {
 }
 
 Header.propTypes = {
-  siteTitle: PropTypes.string.isRequired,
   path: PropTypes.string.isRequired
 }
 
