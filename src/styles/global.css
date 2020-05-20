@@ -1,0 +1,59 @@
+* {
+    margin:0;
+    padding:0;
+    border:none;
+    outline:none;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size:16px;
+    color:#484848;
+    line-height:1.6em;
+    font-weight:400;
+    background-size:cover;
+    background: #ffffff no-repeat center top;
+    -webkit-font-smoothing: antialiased;
+}
+
+a{
+    text-decoration:none;
+    cursor:pointer;
+    color:#247fe1;
+}
+
+a:hover,a:focus,a:visited{
+    text-decoration:none;
+    outline:none;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    position:relative;
+    font-family: 'Lora', serif;
+    font-weight:normal;
+    margin:0;
+    background:none;
+    line-height:1.6em;
+}
+
+input,button,select,textarea{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+p{
+    position:relative;
+    line-height:1.6em;
+}
+
+ul,li{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+.icon {
+    position: relative;
+    top: 6px;
+    font-size: 20px;
+    padding-right: 5px;
+}
