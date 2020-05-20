@@ -97,7 +97,7 @@ const RightColumn = ({ col1, col2 }) => (
             <div>
               <p>Signup for our mailing list to get latest updates and news.</p>
             </div>
-            <form method='post' name="subscribe" data-netlify="true">
+            <form method='post' name='subscribe' data-netlify='true'>
               <FormGroup className='form-group'>
                 <input
                   type='email'

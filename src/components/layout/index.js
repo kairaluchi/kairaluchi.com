@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import Header from '../header'
 import Footer from '../footer'
-import { StateProvider, useStateValue } from "../../hooks/context";
+import { StateProvider, useStateValue } from '../../hooks/context'
 
 const PageWrapper = styled.div`
   position: relative;
@@ -49,7 +49,11 @@ const PageSection = styled.section`
 `
 
 const PageHeader = ({ page }) => {
-  const { defaultImage: { node: { secure_url: defaultImage } } } = useStateValue()
+  const {
+    defaultImage: {
+      node: { secure_url: defaultImage }
+    }
+  } = useStateValue()
   return (
     <PageSection bgImage={defaultImage}>
       <AutoContainer>

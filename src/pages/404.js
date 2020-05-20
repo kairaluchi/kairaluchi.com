@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from "styled-components";
+import styled from 'styled-components'
 import Layout from '../components/layout'
 import Seo from '../components/seo'
 
@@ -9,7 +9,7 @@ const AutoContainer = styled.div`
   padding: 40px 15px;
   margin: 0 auto;
   text-align: center;
-  
+
   p {
     font-size: 18px;
   }
@@ -20,7 +20,10 @@ const NotFoundPage = props => (
     <Seo title='404: Not found' />
     <AutoContainer>
       <h1>NOT FOUND!</h1>
-      <p>You just tried to access a resource that doesn&#39;t exist... the sadness.</p>
+      <p>
+        You just tried to access a resource that doesn&#39;t exist... the
+        sadness.
+      </p>
     </AutoContainer>
   </Layout>
 )
