@@ -98,6 +98,8 @@ const RightColumn = ({ col1, col2 }) => (
               <p>Signup for our mailing list to get latest updates and news.</p>
             </div>
             <form
+              action='#'
+              name='subscribe'
               method='post'
               netlify-honeypot='bot-field'
               data-netlify='true'
@@ -105,7 +107,7 @@ const RightColumn = ({ col1, col2 }) => (
               <input type='hidden' name='bot-field' />
               <FormGroup className='form-group'>
                 <input type='email' name='email' placeholder='Email address' />
-                <button type='submit' className='theme-btn btn-submit'>
+                <button type='submit'>
                   <FaEnvelope />
                 </button>
               </FormGroup>
