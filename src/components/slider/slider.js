@@ -14,7 +14,7 @@ const sliderCSS = css`
   overflow: hidden;
 `
 
-const getWidth = () => window.innerWidth
+const getWidth = () => typeof window !== 'undefined' && window.innerWidth
 
 const Slider = props => {
   const { slides, displays } = props
