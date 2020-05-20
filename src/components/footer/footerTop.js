@@ -97,14 +97,13 @@ const RightColumn = ({ col1, col2 }) => (
             <div>
               <p>Signup for our mailing list to get latest updates and news.</p>
             </div>
-            <form method='post' name='subscribe' data-netlify='true'>
+            <form method="post" netlify-honeypot="bot-field" data-netlify="true">
+              <input type="hidden" name="bot-field"  />
               <FormGroup className='form-group'>
                 <input
                   type='email'
                   name='email'
                   placeholder='Email address'
-                  onChange={() => {}}
-                  required
                 />
                 <button type='submit' className='theme-btn btn-submit'>
                   <FaEnvelope />

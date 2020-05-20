@@ -100,11 +100,11 @@ const Slider = props => {
       window.removeEventListener('transitionend', transitionEnd)
       window.removeEventListener('resize', onResize)
     }
-  }, [props.autoPlay])
+  }, [])
 
   useEffect(() => {
     if (transition === 0) setState({ ...state, transition: 0.45 })
-  }, [transition, state])
+  }, [transition])
 
   return (
     <div css={sliderCSS}>
