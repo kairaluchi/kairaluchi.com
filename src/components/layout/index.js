@@ -1,10 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import { useStaticQuery, graphql } from 'gatsby'
 import Header from '../header'
 import Footer from '../footer'
-import defaultBackground from '../../images/default-bg-page-title.jpg'
+import { StateProvider, useStateValue } from "../../hooks/context";
 
 const PageWrapper = styled.div`
   position: relative;
@@ -29,8 +28,7 @@ const PageSection = styled.section`
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
-  background-image: url(${props =>
-    props.bgImage ? props.bgImage : defaultBackground});
+  background-image: url(${props => props.bgImage});
 
   &:before {
     content: "";
@@ -50,34 +48,29 @@ const PageSection = styled.section`
   }
 `
 
-const PageHeader = ({ page, pageImage }) => (
-  <PageSection bgImage={pageImage}>
-    <AutoContainer>
-      <h1>{page}</h1>
-    </AutoContainer>
-  </PageSection>
-)
-
-const Layout = ({ children, uri, page, pageImage }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
+const PageHeader = ({ page }) => {
+  const { defaultImage: { node: { secure_url: defaultImage } } } = useStateValue()
   return (
-    <PageWrapper>
-      <Header siteTitle={data.site.siteMetadata.title} path={uri} />
-      <>
-        {page && <PageHeader page={page} pageImage={pageImage} />}
-        {children}
-      </>
-      <Footer />
-    </PageWrapper>
+    <PageSection bgImage={defaultImage}>
+      <AutoContainer>
+        <h1>{page}</h1>
+      </AutoContainer>
+    </PageSection>
+  )
+}
+
+const Layout = ({ children, uri, page }) => {
+  return (
+    <StateProvider>
+      <PageWrapper>
+        <Header path={uri} />
+        <>
+          {page && <PageHeader page={page} />}
+          {children}
+        </>
+        <Footer />
+      </PageWrapper>
+    </StateProvider>
   )
 }
 

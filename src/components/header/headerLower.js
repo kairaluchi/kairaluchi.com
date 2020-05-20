@@ -75,11 +75,8 @@ const HeaderLower = ({ menu, path }) => (
             </Navigation>
           </NavbarCollapse>
         </MainMenu>
-
         <GetBtn>
-          <ApptBtn href='/contact' className='theme-btn appt-btn'>
-            Get An Appointment
-          </ApptBtn>
+          <ApptBtn href='/contact'>Get An Appointment</ApptBtn>
         </GetBtn>
       </NavOuter>
     </AutoContainer>

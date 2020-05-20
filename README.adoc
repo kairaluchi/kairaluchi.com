@@ -1,7 +1,9 @@
 [caption="Kaira Luchi: ",link=http://www.kairaluchi.com]
-image::src/images/small-logo.png[Kaira Luchi, 100]
+image::kairaluchi.png[Kaira Luchi, 100]
 
-= Kaira Luchi Website
+== Kaira Luchi Website
+https://www.kairaluchi.com
+
 
 [link=https://app.netlify.com/sites/musing-dubinsky-d9b636/deploys]
 image::https://api.netlify.com/api/v1/badges/019b222d-d62c-46bf-8376-048bf58e4de6/deploy-status[netlify status]
