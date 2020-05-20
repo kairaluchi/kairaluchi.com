@@ -40,7 +40,7 @@ const menu = [
 ]
 
 const Header = ({ path }) => {
-  const { siteTitle } = useStateValue()
+  const { siteTitle, siteData } = useStateValue()
   const [bounceHeaderVisibility, setBounceHeaderVisibility] = useState(false)
   const [scrollPosition, setScrollPosition] = useState(0)
   const mainHeaderEl = useRef(null)
@@ -61,8 +61,8 @@ const Header = ({ path }) => {
 
   return (
     <MainHeader ref={mainHeaderEl}>
-      <HeaderTop siteTitle={siteTitle} />
-      <HeaderUpper siteTitle={siteTitle} />
+      <HeaderTop siteTitle={siteTitle} siteData={siteData} />
+      <HeaderUpper siteTitle={siteTitle} siteData={siteData} />
       <HeaderLower menu={menu} path={path} />
       <HeaderBounce
         showHeader={bounceHeaderVisibility}
