@@ -5,10 +5,11 @@ const slideDisplayCss = css`
   position: absolute;
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 80%;
   height: 100%;
   top: 10%;
   margin-left: 150px;
+  margin-right: 150px;
   color: #ffffff;
 `
 
