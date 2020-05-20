@@ -1,5 +1,5 @@
 [caption="Kaira Luchi: ",link=http://www.kairaluchi.com]
-image::src/images/small-logo.png[Kaira Luchi, 80]
+image::src/images/small-logo.png[Kaira Luchi, 100]
 
 = Kaira Luchi Website
 
