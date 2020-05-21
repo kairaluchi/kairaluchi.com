@@ -13,7 +13,7 @@ import {
   SocialLinks
 } from './helper'
 
-const LeftColumn = () => (
+const LeftColumn = ({ siteData }) => (
   <div className='col-md-6 col-sm-12 col-xs-12'>
     <div className='row clearfix'>
       <Column className='col-lg-6 col-sm-6 col-xs-12 column'>
@@ -42,18 +42,18 @@ const LeftColumn = () => (
         <ContactInfo>
           <li>
             <h4>Address</h4>
-            <p>Kaira Luchi LLC, Ellicott City, Maryland, USA.</p>
+            <p>Kaira Luchi LLC, {siteData.address}</p>
           </li>
           <li>
             <h4>Email Us</h4>
             <p>
-              <a href='mailto:info@kairaluchi.com'>Info@KairaLuchi.Com</a>
+              <a href={`mailto:${siteData.email}`}>{siteData.email}</a>
             </p>
           </li>
           <li>
             <h4>Call Us</h4>
             <p>
-              <a href='tel:3014427620'>+1 (301) 442 7620</a>
+             {siteData.phone}
             </p>
           </li>
         </ContactInfo>
@@ -134,14 +134,14 @@ const RightColumn = ({ col1, col2 }) => (
   </div>
 )
 
-const FooterTop = ({ menu }) => {
+const FooterTop = ({ menu, siteData }) => {
   const half = Math.floor(menu.length / 2)
   const [col1, col2] = [menu.slice(0, half), menu.slice(half, menu.length)]
   return (
     <FooterUpper>
       <AutoContainer>
         <div className='row clearfix'>
-          <LeftColumn />
+          <LeftColumn siteData={siteData} />
           <RightColumn col1={col1} col2={col2} />
         </div>
       </AutoContainer>

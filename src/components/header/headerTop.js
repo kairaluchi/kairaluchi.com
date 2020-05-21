@@ -45,7 +45,7 @@ const TopRight = styled.div`
   padding: 10px 0px;
 `
 
-const HeaderTop = ({ siteTitle }) => (
+const HeaderTop = ({ siteTitle, siteData }) => (
   <TopHeader>
     <AutoContainer className='clearfix'>
       <TopLeft>
@@ -58,9 +58,9 @@ const HeaderTop = ({ siteTitle }) => (
       <TopRight>
         <ul>
           <li>
-            <a href='mailto:info@kairaluchi.com'>
+            <a href={`mailto:${siteData.email}`}>
               <FaRegEnvelope className='icon' /> Email us at :
-              info@kairaluchi.com
+              {siteData.email}
             </a>
           </li>
         </ul>

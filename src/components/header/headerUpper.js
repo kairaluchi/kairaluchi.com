@@ -65,36 +65,36 @@ const columnBoxes = [
   {
     key: 'contact-us',
     name: 'Contact Us',
-    value: '(301) 442 7620',
-    link: 'tel:+13014427620',
+    value: 'phone',
     Icon: <RiPhoneLine />
   },
   {
     key: 'our-address',
     name: 'Our Address',
-    value: 'Ellicott City, Maryland, US.',
+    value: 'address',
     Icon: <RiMapPinLine />
   },
   {
     key: 'working-hours',
     name: 'Working Hours',
-    value: 'Mon - Sat : 9:00 am to 5:00 pm',
+    value: 'workingHours',
     Icon: <RiTimerLine />
   }
 ]
-const UpperColumnBox = ({ name, value, link, Icon }) => (
+
+const UpperColumnBox = ({ name, value, Icon }) => (
   <UpperColumn>
     <IconBox>{Icon}</IconBox>
     <ul>
       <li>
         <strong>{name}</strong>
       </li>
-      <li>{link ? <a href={link}>{value}</a> : value}</li>
+      <li>{value}</li>
     </ul>
   </UpperColumn>
 )
 
-const HeaderUpper = ({ siteTitle }) => (
+const HeaderUpper = ({ siteTitle, siteData }) => (
   <UpperHeader>
     <AutoContainer>
       <div className='clearfix'>
@@ -104,8 +104,8 @@ const HeaderUpper = ({ siteTitle }) => (
           </a>
         </Logo>
         <Container className='pull-right'>
-          {columnBoxes.map(({ key, ...rest }) => (
-            <UpperColumnBox key={key} {...rest} />
+          {columnBoxes.map(({ key, value, ...rest }) => (
+            <UpperColumnBox key={key} value={siteData[value]} {...rest} />
           ))}
         </Container>
       </div>
