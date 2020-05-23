@@ -18,7 +18,7 @@ const sliderCSS = css`
 const getWidth = () => typeof window !== 'undefined' && window.innerWidth
 
 const Slider = props => {
-  const { slides } = useStateValue()
+  const [{ slides }] = useStateValue()
   const { displays } = props
 
   const firstSlide = slides[0]
@@ -100,11 +100,11 @@ const Slider = props => {
       window.removeEventListener('transitionend', transitionEnd)
       window.removeEventListener('resize', onResize)
     }
-  }, [])
+  }, [props.autoPlay])
 
   useEffect(() => {
     if (transition === 0) setState({ ...state, transition: 0.45 })
-  }, [transition])
+  }, [transition, state])
 
   return (
     <div css={sliderCSS}>

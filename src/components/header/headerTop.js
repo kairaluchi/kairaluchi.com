@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
+import { Link } from 'gatsby'
 import { FaRegEnvelope } from 'react-icons/fa'
 import { AutoContainer } from './helper'
 
@@ -51,7 +52,7 @@ const HeaderTop = ({ siteTitle, siteData }) => (
       <TopLeft>
         <ul>
           <li>
-            <a href='/'>Welcome to {siteTitle} - Making businesses better</a>
+            <Link to='/'>{siteTitle} - Making businesses better</Link>
           </li>
         </ul>
       </TopLeft>
@@ -59,8 +60,8 @@ const HeaderTop = ({ siteTitle, siteData }) => (
         <ul>
           <li>
             <a href={`mailto:${siteData.email}`}>
-              <FaRegEnvelope className='icon' /> Email us at :
-              {siteData.email}
+              <FaRegEnvelope className='icon' />
+              {` Email us at:  ${siteData.email}`}
             </a>
           </li>
         </ul>

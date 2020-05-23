@@ -38,7 +38,7 @@ const menu = [
 ]
 
 const Footer = () => {
-  const { siteData } = useStateValue()
+  const [{ siteData }] = useStateValue()
 
   return (
     <Wrapper className='main-footer'>

@@ -1,5 +1,6 @@
 import React from 'react'
 import { FaFacebook, FaTwitter, FaLinkedin, FaEnvelope } from 'react-icons/fa'
+import { Link } from 'gatsby'
 import {
   AutoContainer,
   Column,
@@ -41,8 +42,8 @@ const LeftColumn = ({ siteData }) => (
         <h3>Contact Us</h3>
         <ContactInfo>
           <li>
-            <h4>Address</h4>
-            <p>Kaira Luchi LLC, {siteData.address}</p>
+            <h4>Office</h4>
+            <p>Kaira Luchi - {siteData.address}</p>
           </li>
           <li>
             <h4>Email Us</h4>
@@ -73,7 +74,7 @@ const RightColumn = ({ col1, col2 }) => (
               <ul>
                 {col2.map(({ name, link }) => (
                   <li key={name}>
-                    <a href={link}>{name}</a>
+                    <Link to={link}>{name}</Link>
                   </li>
                 ))}
               </ul>
@@ -82,7 +83,7 @@ const RightColumn = ({ col1, col2 }) => (
               <ul>
                 {col1.map(({ name, link }) => (
                   <li key={name}>
-                    <a href={link}>{name}</a>
+                    <Link to={link}>{name}</Link>
                   </li>
                 ))}
               </ul>

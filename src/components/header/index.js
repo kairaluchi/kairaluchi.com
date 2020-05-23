@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from 'react'
-import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import HeaderTop from './headerTop'
 import HeaderUpper from './headerUpper'
@@ -39,8 +38,8 @@ const menu = [
   }
 ]
 
-const Header = ({ path }) => {
-  const { siteTitle, siteData } = useStateValue()
+const Header = () => {
+  const [{ siteTitle, siteData }] = useStateValue()
   const [bounceHeaderVisibility, setBounceHeaderVisibility] = useState(false)
   const [scrollPosition, setScrollPosition] = useState(0)
   const mainHeaderEl = useRef(null)
@@ -63,19 +62,14 @@ const Header = ({ path }) => {
     <MainHeader ref={mainHeaderEl}>
       <HeaderTop siteTitle={siteTitle} siteData={siteData} />
       <HeaderUpper siteTitle={siteTitle} siteData={siteData} />
-      <HeaderLower menu={menu} path={path} />
+      <HeaderLower menu={menu} />
       <HeaderBounce
         showHeader={bounceHeaderVisibility}
         siteTitle={siteTitle}
         menu={menu}
-        path={path}
       />
     </MainHeader>
   )
-}
-
-Header.propTypes = {
-  path: PropTypes.string.isRequired
 }
 
 export default Header

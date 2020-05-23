@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import Header from '../header'
 import Footer from '../footer'
 import { StateProvider, useStateValue } from '../../hooks/context'
+import { reducer } from '../../hooks/reducer'
 
 const PageWrapper = styled.div`
   position: relative;
@@ -49,11 +50,11 @@ const PageSection = styled.section`
 `
 
 const PageHeader = ({ page }) => {
-  const {
+  const [{
     defaultImage: {
       node: { secure_url: defaultImage }
     }
-  } = useStateValue()
+  }] = useStateValue()
   return (
     <PageSection bgImage={defaultImage}>
       <AutoContainer>
@@ -65,7 +66,7 @@ const PageHeader = ({ page }) => {
 
 const Layout = ({ children, uri, page }) => {
   return (
-    <StateProvider>
+    <StateProvider reducer={reducer}>
       <PageWrapper>
         <Header path={uri} />
         <>

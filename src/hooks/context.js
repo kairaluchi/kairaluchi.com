@@ -1,9 +1,9 @@
-import React, { createContext, useContext } from 'react'
+import React, { createContext, useContext, useReducer } from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 
 export const StateContext = createContext()
 
-export const StateProvider = ({ children }) => {
+export const StateProvider = ({ children, reducer }) => {
   const data = useStaticQuery(graphql`
     query allData {
       site {
@@ -41,9 +41,10 @@ export const StateProvider = ({ children }) => {
   )
   const siteTitle = site.siteMetadata.title
   const [siteData] = allDataJson.edges.map(item => item.node)
+  const initialState = { slides, siteTitle, defaultImage, siteData }
 
   return (
-    <StateContext.Provider value={{ slides, siteTitle, defaultImage, siteData }}>
+    <StateContext.Provider value={useReducer(reducer, initialState)}>
       {children}
     </StateContext.Provider>
   )
