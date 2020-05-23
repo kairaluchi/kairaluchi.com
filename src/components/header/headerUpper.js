@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { Link } from 'gatsby'
 import styled from 'styled-components'
 import { RiPhoneLine, RiMapPinLine, RiTimerLine } from 'react-icons/ri'
 import logo from '../../images/logo.png'
@@ -69,8 +70,8 @@ const columnBoxes = [
     Icon: <RiPhoneLine />
   },
   {
-    key: 'our-address',
-    name: 'Our Address',
+    key: 'our-office',
+    name: 'Office',
     value: 'address',
     Icon: <RiMapPinLine />
   },
@@ -99,9 +100,9 @@ const HeaderUpper = ({ siteTitle, siteData }) => (
     <AutoContainer>
       <div className='clearfix'>
         <Logo className='pull-left'>
-          <a href='/'>
+          <Link to='/'>
             <img width='220px' src={logo} alt={siteTitle} title={siteTitle} />
-          </a>
+          </Link>
         </Logo>
         <Container className='pull-right'>
           {columnBoxes.map(({ key, value, ...rest }) => (

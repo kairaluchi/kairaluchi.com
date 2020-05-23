@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Link } from 'gatsby'
 import { AutoContainer } from './helper'
 
 const BottomFooter = styled.div`
@@ -42,7 +43,7 @@ const FooterBottom = ({ menu }) => (
             <ul className='pull-right clearfix'>
               {menu.map(({ name, link }) => (
                 <li key={name}>
-                  <a href={link}>{name}</a>
+                  <Link to={link}>{name}</Link>
                 </li>
               ))}
             </ul>

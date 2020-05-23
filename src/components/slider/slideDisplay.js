@@ -18,6 +18,7 @@ const Tag = styled.h3`
   font-size: 20px;
   width: 230px;
   font-style: italic;
+  font-weight: 550;
   padding-bottom: 10px;
   margin-bottom: 20px;
 
@@ -40,7 +41,7 @@ const Title = styled.h1`
 `
 
 const Caption = styled.p`
-  font-weight: 400;
+  font-weight: 600;
   font-size: 20px;
 `
 

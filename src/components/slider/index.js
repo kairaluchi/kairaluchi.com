@@ -4,24 +4,24 @@ import Slider from './slider'
 const displays = [
   {
     tag: 'Welcome to Kaira Luchi',
-    title: 'Lorem ipsum dolor sit amet',
-    caption: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
+    title: 'Cutting edge technology begins here',
+    caption: 'Using cutting edge technology for modernization and migration'
   },
   {
     tag: 'Welcome to Kaira Luchi',
-    title: 'Creating the environment for business',
-    caption: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
+    title: 'Solving tomorrows challenges, today',
+    caption: 'Using new innovations in technology to help companies solve challenging problems'
   },
   {
     tag: 'Welcome to Kaira Luchi',
-    title: 'Lorem ipsum dolor sit amet',
-    caption: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
+    title: 'Your vision + our expertise = Growth',
+    caption: 'Your vision + our expertise = Results'
   },
   {
     tag: 'Welcome to Kaira Luchi',
-    title: 'Building a Better Business',
-    caption: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
+    title: 'Small changes, big results, excellence achieved',
+    caption: 'Helping your business grow by supporting your continuous improvement journey'
   }
 ]
 
-export default () => <Slider autoPlay={5} displays={displays} />
+export default () => <Slider autoPlay={7} displays={displays} />

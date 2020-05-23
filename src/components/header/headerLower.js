@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
+import { Link } from 'gatsby'
 import { Navigation, AutoContainer, NavbarCollapse, MainMenu } from './helper'
 
 const LowerHeader = styled.div`
@@ -30,7 +31,7 @@ const GetBtn = styled.div`
   }
 `
 
-const ApptBtn = styled.a`
+const ApptBtn = styled(Link)`
   position: relative;
   display: block;
   line-height: 30px;
@@ -47,7 +48,7 @@ const ApptBtn = styled.a`
   }
 `
 
-const HeaderLower = ({ menu, path }) => (
+const HeaderLower = ({ menu }) => (
   <LowerHeader className='header-lower'>
     <AutoContainer className='auto-container'>
       <NavOuter className='clearfix'>
@@ -68,15 +69,15 @@ const HeaderLower = ({ menu, path }) => (
           <NavbarCollapse className='navbar-collapse collapse clearfix'>
             <Navigation className='clearfix'>
               {menu.map(({ name, link }) => (
-                <li key={name} className={path === link ? 'current' : ''}>
-                  <a href={link}>{name}</a>
+                <li key={name}>
+                  <Link to={link} activeClassName='current'>{name}</Link>
                 </li>
               ))}
             </Navigation>
           </NavbarCollapse>
         </MainMenu>
         <GetBtn>
-          <ApptBtn href='/contact'>Get An Appointment</ApptBtn>
+          <ApptBtn data-target='Contact Us' to='/contact'>Get An Appointment</ApptBtn>
         </GetBtn>
       </NavOuter>
     </AutoContainer>
@@ -89,8 +90,7 @@ HeaderLower.propTypes = {
       name: PropTypes.string.isRequired,
       link: PropTypes.string.isRequired
     })
-  ),
-  path: PropTypes.string.isRequired
+  )
 }
 
 export default HeaderLower

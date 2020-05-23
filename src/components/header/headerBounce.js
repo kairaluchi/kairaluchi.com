@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { Link } from 'gatsby'
 import styled, { css } from 'styled-components'
 import logo from '../../images/logo.png'
 import { Navigation, AutoContainer, NavbarCollapse, MainMenu } from './helper'
@@ -47,16 +48,16 @@ const BounceHeader = styled.div`
 `
 
 const Logo = styled.div`
-  padding: 6px 0px 2px;
+  padding: 9px 0px 2px;
 `
 
-const HeaderBounce = ({ showHeader, siteTitle, menu, path }) => (
+const HeaderBounce = ({ showHeader, siteTitle, menu }) => (
   <BounceHeader showHeader={showHeader}>
     <AutoContainer className='clearfix'>
       <Logo className='pull-left'>
-        <a href='/' className='img-responsive'>
-          <img width='180px' src={logo} alt={siteTitle} title={siteTitle} />
-        </a>
+        <Link to='/' className='img-responsive'>
+          <img width='160px' src={logo} alt={siteTitle} title={siteTitle} />
+        </Link>
       </Logo>
       <div className='right-col pull-right'>
         <MainMenu className='main-menu'>
@@ -75,8 +76,8 @@ const HeaderBounce = ({ showHeader, siteTitle, menu, path }) => (
           <NavbarCollapse className='navbar-collapse collapse clearfix'>
             <Navigation contrast className='clearfix'>
               {menu.map(({ name, link }) => (
-                <li key={name} className={path === link ? 'current' : ''}>
-                  <a href={link}>{name}</a>
+                <li key={name}>
+                  <Link to={link} activeClassName='current'>{name}</Link>
                 </li>
               ))}
             </Navigation>
@@ -95,8 +96,7 @@ HeaderBounce.propTypes = {
       name: PropTypes.string.isRequired,
       link: PropTypes.string.isRequired
     })
-  ),
-  path: PropTypes.string.isRequired
+  )
 }
 
 export default HeaderBounce
