@@ -32,7 +32,14 @@ const arrowCss = css`
 `
 
 const Arrow = ({ direction, handleClick }) => (
-  <div css={arrowCss} direction={direction} onClick={handleClick}>
+  <div
+    role='button'
+    tabIndex={0}
+    css={arrowCss}
+    direction={direction}
+    onKeyDown={handleClick}
+    onClick={handleClick}
+  >
     {direction === 'right' ? <RiArrowRightSLine /> : <RiArrowLeftSLine />}
   </div>
 )

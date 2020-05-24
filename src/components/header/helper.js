@@ -35,7 +35,7 @@ export const Navigation = styled.ul`
       -webkit-transition: all 500ms ease;
       -ms-transition: all 500ms ease;
       -o-transition: all 500ms ease;
-      
+
       &:hover,
       &.current,
       &.current-menu-item {

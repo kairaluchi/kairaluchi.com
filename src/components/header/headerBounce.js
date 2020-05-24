@@ -77,7 +77,9 @@ const HeaderBounce = ({ showHeader, siteTitle, menu }) => (
             <Navigation contrast className='clearfix'>
               {menu.map(({ name, link }) => (
                 <li key={name}>
-                  <Link to={link} activeClassName='current'>{name}</Link>
+                  <Link to={link} activeClassName='current'>
+                    {name}
+                  </Link>
                 </li>
               ))}
             </Navigation>

@@ -70,14 +70,18 @@ const HeaderLower = ({ menu }) => (
             <Navigation className='clearfix'>
               {menu.map(({ name, link }) => (
                 <li key={name}>
-                  <Link to={link} activeClassName='current'>{name}</Link>
+                  <Link to={link} activeClassName='current'>
+                    {name}
+                  </Link>
                 </li>
               ))}
             </Navigation>
           </NavbarCollapse>
         </MainMenu>
         <GetBtn>
-          <ApptBtn data-target='Contact Us' to='/contact'>Get An Appointment</ApptBtn>
+          <ApptBtn data-target='Contact Us' to='/contact'>
+            Get An Appointment
+          </ApptBtn>
         </GetBtn>
       </NavOuter>
     </AutoContainer>

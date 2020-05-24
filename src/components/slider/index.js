@@ -1,5 +1,20 @@
 import React from 'react'
+import styled from 'styled-components'
 import Slider from './slider'
+import { Link } from 'gatsby'
+
+const LearnMore = styled(Link)`
+  color: #ffffff;
+  background-color: #247fe1;
+  padding: 12px;
+  font-size: 15px;
+  border-radius: 4px;
+
+  &:hover {
+    background-color: #484848;
+    color: #ffffff;
+  }
+`
 
 const displays = [
   {
@@ -10,18 +25,20 @@ const displays = [
   {
     tag: 'Welcome to Kaira Luchi',
     title: 'Solving tomorrows challenges, today',
-    caption: 'Using new innovations in technology to help companies solve challenging problems'
+    caption:
+      'Using new innovations in technology to help companies solve challenging problems'
   },
   {
     tag: 'Welcome to Kaira Luchi',
-    title: 'Your vision + our expertise = Growth',
-    caption: 'Your vision + our expertise = Results'
+    title: 'Your vision + our expertise = Results',
+    caption: <LearnMore to='/services'>Learn More</LearnMore>
   },
   {
     tag: 'Welcome to Kaira Luchi',
     title: 'Small changes, big results, excellence achieved',
-    caption: 'Helping your business grow by supporting your continuous improvement journey'
+    caption:
+      'Helping your business grow by supporting your continuous improvement journey'
   }
 ]
 
-export default () => <Slider autoPlay={7} displays={displays} />
+export default () => <Slider autoPlay={9} displays={displays} />

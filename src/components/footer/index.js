@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import FooterTop from './footerTop'
 import FooterBottom from './footerBottom'
-import { useStateValue } from "../../hooks/context";
+import { useStateValue } from '../../hooks/context'
 
 const Wrapper = styled.div`
   position: relative;

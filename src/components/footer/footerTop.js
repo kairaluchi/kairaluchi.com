@@ -53,9 +53,7 @@ const LeftColumn = ({ siteData }) => (
           </li>
           <li>
             <h4>Call Us</h4>
-            <p>
-             {siteData.phone}
-            </p>
+            <p>{siteData.phone}</p>
           </li>
         </ContactInfo>
       </Column>
