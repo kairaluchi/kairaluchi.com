@@ -50,11 +50,13 @@ const PageSection = styled.section`
 `
 
 const PageHeader = ({ page }) => {
-  const [{
-    defaultImage: {
-      node: { secure_url: defaultImage }
+  const [
+    {
+      defaultImage: {
+        node: { secure_url: defaultImage }
+      }
     }
-  }] = useStateValue()
+  ] = useStateValue()
   return (
     <PageSection bgImage={defaultImage}>
       <AutoContainer>
