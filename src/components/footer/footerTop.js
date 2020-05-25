@@ -1,8 +1,8 @@
 import React from 'react'
 import { FaFacebook, FaTwitter, FaLinkedin, FaEnvelope } from 'react-icons/fa'
 import { Link } from 'gatsby'
+import { AutoContainer } from '../common'
 import {
-  AutoContainer,
   Column,
   AboutWidget,
   Confid,
