@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
-import { AutoContainer } from './helper'
+import { AutoContainer } from '../common'
 
 const BottomFooter = styled.div`
   position: relative;
