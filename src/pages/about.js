@@ -68,16 +68,16 @@ const Text = styled.div`
 
 const ColumnSection = styled.div`
   background-color: #272727;
-  padding-top: 65px;
-  padding-bottom: 65px;
+  padding-top: 100px;
+  padding-bottom: 100px;
 `
 
 const TagLine = styled.div`
   font-size: 28px;
   text-align: center;
   line-height: 1.5em;
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding-top: 100px;
+  padding-bottom: 100px;
 `
 
 const LowerSection = styled.div`
