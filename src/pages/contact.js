@@ -143,7 +143,7 @@ const ButtonWrapper = styled.div`
   padding-top: 20px;
 `
 
-const ContactWrapper = () => (
+const ContactWrapper = ({ action }) => (
   <>
     <TopSection>
       <AutoContainer>
@@ -174,7 +174,7 @@ const ContactWrapper = () => (
             <DefaultForm>
               <form
                 method='post'
-                action='#'
+                action={action}
                 name='contact'
                 netlify-honeypot='bot-field'
                 data-netlify='true'
@@ -227,7 +227,7 @@ const ContactWrapper = () => (
 const ContactPage = props => (
   <Layout page='Contact Us' {...props}>
     <Seo title='Contact' />
-    <ContactWrapper />
+    <ContactWrapper action='/success' />
   </Layout>
 )
 
