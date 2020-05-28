@@ -179,6 +179,7 @@ const ContactWrapper = () => (
                 netlify-honeypot='bot-field'
                 data-netlify='true'
               >
+                <input type='hidden' name='bot-field' />
                 <div className='row clearfix'>
                   <div className='form-group col-lg-6 col-md-6 col-xs-12'>
                     <FieldLabel>
