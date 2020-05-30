@@ -66,11 +66,11 @@ const PageHeader = ({ page }) => {
   )
 }
 
-const Layout = ({ children, uri, page }) => {
+const Layout = ({ children, page }) => {
   return (
     <StateProvider reducer={reducer}>
       <PageWrapper>
-        <Header path={uri} />
+        <Header />
         <>
           {page && <PageHeader page={page} />}
           {children}

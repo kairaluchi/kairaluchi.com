@@ -52,7 +52,9 @@ const HeaderTop = ({ siteTitle, siteData }) => (
       <TopLeft>
         <ul>
           <li>
-            <Link to='/'>{siteTitle} - Making businesses better</Link>
+            <Link to='/'>
+              {siteTitle} - Making businesses better one solution at a time
+            </Link>
           </li>
         </ul>
       </TopLeft>
