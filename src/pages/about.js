@@ -115,7 +115,6 @@ const TopSection = styled.section`
   }
 `
 
-
 const AboutWrapper = () => (
   <Wrapper>
     <AutoContainer>
@@ -137,8 +136,8 @@ const AboutWrapper = () => (
               expectation
             </li>
             <li>
-              We strive for continuous improvement, because the bar for excellence
-              can always be increased
+              We strive for continuous improvement, because the bar for
+              excellence can always be increased
             </li>
           </ul>
         </AutoContainer>
