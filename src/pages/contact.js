@@ -227,7 +227,7 @@ const ContactWrapper = ({ action }) => (
 const ContactPage = props => (
   <Layout page='Contact Us' {...props}>
     <Seo title='Contact' />
-    <ContactWrapper action='/success' />
+    <ContactWrapper action='/success?form=contact' />
   </Layout>
 )
 

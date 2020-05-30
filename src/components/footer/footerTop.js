@@ -21,9 +21,9 @@ const LeftColumn = ({ siteData }) => (
         <AboutWidget>
           <h3>KAIRA LUCHI</h3>
           <p>
-            The first mate and his Skipper too will do their very best to make
-            the others comfortable in their tropic island nest. Fleeing from the
-            Cylon tyranny last Battlestar galactica leads.
+            Connect with us on social media for the latest Kaira Luchi news,
+            We regularly provide updates, useful tips and tricks,
+            and upcoming training and events..
           </p>
           <SocialLinks className='social-links'>
             <a href='/'>
@@ -61,7 +61,7 @@ const LeftColumn = ({ siteData }) => (
   </div>
 )
 
-const RightColumn = ({ col1, col2 }) => (
+const RightColumn = ({ col1, col2, action }) => (
   <div className='col-md-6 col-sm-12 col-xs-12'>
     <div className='row clearfix'>
       <Column className='col-lg-6 col-sm-6 col-xs-12 column'>
@@ -97,7 +97,7 @@ const RightColumn = ({ col1, col2 }) => (
               <p>Signup for our mailing list to get latest updates and news.</p>
             </div>
             <form
-              action='#'
+              action={action}
               name='subscribe'
               method='post'
               netlify-honeypot='bot-field'
@@ -141,7 +141,7 @@ const FooterTop = ({ menu, siteData }) => {
       <AutoContainer>
         <div className='row clearfix'>
           <LeftColumn siteData={siteData} />
-          <RightColumn col1={col1} col2={col2} />
+          <RightColumn col1={col1} col2={col2} action='/success?form=subscribe' />
         </div>
       </AutoContainer>
     </FooterUpper>
