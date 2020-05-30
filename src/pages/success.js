@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Layout from '../components/layout'
 import Seo from '../components/seo'
-import { AutoContainer } from "../components/common";
+import { AutoContainer } from '../components/common'
 
 const Message = styled.div`
   padding: 60px 0 60px;
@@ -20,10 +20,13 @@ const page = {
   contact: 'Message Successfully Sent'
 }
 
-const displayMessage = (form, data, defaultMessage) => data[form] || defaultMessage
+const displayMessage = (form, data, defaultMessage) =>
+  data[form] || defaultMessage
 
 const SuccessPage = props => {
-  const { location: { search } } = props
+  const {
+    location: { search }
+  } = props
   const [, form] = search.split('=')
   const defaultTitle = 'Message Successfully Sent'
   const defaultMessage = 'Thanks for sending us your message'

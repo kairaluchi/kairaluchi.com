@@ -5,9 +5,7 @@ export const ButtonWrapper = styled.div`
   flex-direction: column;
 `
 
-export const ContentWrapper = styled.div`
-  
-`
+export const ContentWrapper = styled.div``
 
 export const Wrapper = styled.div`
   padding-top: 80px;

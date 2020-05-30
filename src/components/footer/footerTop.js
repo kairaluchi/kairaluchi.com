@@ -21,9 +21,9 @@ const LeftColumn = ({ siteData }) => (
         <AboutWidget>
           <h3>KAIRA LUCHI</h3>
           <p>
-            Connect with us on social media for the latest Kaira Luchi news,
-            We regularly provide updates, useful tips and tricks,
-            and upcoming training and events..
+            Connect with us on social media for the latest Kaira Luchi news, We
+            regularly provide updates, useful tips and tricks, and upcoming
+            training and events..
           </p>
           <SocialLinks className='social-links'>
             <a href='/'>
@@ -141,7 +141,11 @@ const FooterTop = ({ menu, siteData }) => {
       <AutoContainer>
         <div className='row clearfix'>
           <LeftColumn siteData={siteData} />
-          <RightColumn col1={col1} col2={col2} action='/success?form=subscribe' />
+          <RightColumn
+            col1={col1}
+            col2={col2}
+            action='/success?form=subscribe'
+          />
         </div>
       </AutoContainer>
     </FooterUpper>

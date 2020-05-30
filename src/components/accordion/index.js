@@ -17,7 +17,7 @@ const defaultData = [
 const AccordionWrapper = ({ data = defaultData }) => {
   const [show, setShow] = useState({ [data[0].page]: true })
 
-  const toggle = (page) => {
+  const toggle = page => {
     setShow({
       [page]: true
     })
@@ -27,14 +27,24 @@ const AccordionWrapper = ({ data = defaultData }) => {
     <Wrapper>
       <AutoContainer className='row'>
         <ButtonWrapper className='col-md-3 col-xs-12'>
-          {
-            data.map(({ page }) => <AccordionButton key={page} show={show[page]} toggle={toggle} page={page} />)
-          }
+          {data.map(({ page }) => (
+            <AccordionButton
+              key={page}
+              show={show[page]}
+              toggle={toggle}
+              page={page}
+            />
+          ))}
         </ButtonWrapper>
         <ContentWrapper className='col-md-9 col-xs-12'>
-          {
-            data.map(({ page, content }) => <AccordionItem key={page} page={page} show={show[page]} content={content} />)
-          }
+          {data.map(({ page, content }) => (
+            <AccordionItem
+              key={page}
+              page={page}
+              show={show[page]}
+              content={content}
+            />
+          ))}
         </ContentWrapper>
       </AutoContainer>
     </Wrapper>
