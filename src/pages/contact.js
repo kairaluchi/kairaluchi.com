@@ -4,24 +4,6 @@ import Layout from '../components/layout'
 import Seo from '../components/seo'
 import { AutoContainer } from '../components/common'
 
-const TopSection = styled.section`
-  padding-top: 60px;
-  padding-bottom: 60px;
-  text-align: center;
-
-  h3 {
-    font-size: 32px;
-    font-weight: 600;
-    margin-bottom: 5px;
-  }
-
-  li {
-    font-size: 26px;
-    margin-bottom: 5px;
-    line-height: 1.5em;
-  }
-`
-
 const LowerSection = styled.section`
   position: relative;
   padding: 60px 0px 50px;
@@ -144,84 +126,63 @@ const ButtonWrapper = styled.div`
 `
 
 const ContactWrapper = ({ action }) => (
-  <>
-    <TopSection>
-      <AutoContainer>
-        <h3>We Serve First</h3>
-        <ul>
-          <li>
-            We listen and identify the needs of our customers and put those
-            needs first
-          </li>
-          <li>
-            We help and empower our customers to develop and achieve beyond
-            expectation
-          </li>
-          <li>
-            We strive for continuous improvement, because the bar for excellence
-            can always be increased
-          </li>
-        </ul>
-      </AutoContainer>
-    </TopSection>
-    <LowerSection>
-      <AutoContainer>
-        <MediumContainer>
-          <div>
-            <h2>Send Your Message</h2>
-          </div>
-          <Column>
-            <DefaultForm>
-              <form
-                method='post'
-                action={action}
-                name='contact'
-                netlify-honeypot='bot-field'
-                data-netlify='true'
-              >
-                <input type='hidden' name='bot-field' />
-                <div className='row clearfix'>
-                  <div className='form-group col-lg-6 col-md-6 col-xs-12'>
-                    <FieldLabel>
-                      Your Name <sup>*</sup>
-                    </FieldLabel>
-                    <input type='text' name='username' />
-                  </div>
-
-                  <div className='form-group col-lg-6 col-md-6 col-xs-12'>
-                    <FieldLabel>
-                      Your E-Mail <sup>*</sup>
-                    </FieldLabel>
-                    <input type='email' name='email' />
-                  </div>
-
-                  <div className='form-group col-lg-6 col-md-6 col-xs-12'>
-                    <FieldLabel>Phone Number</FieldLabel>
-                    <input type='text' name='phone' required />
-                  </div>
-
-                  <div className='form-group col-lg-6 col-md-6 col-xs-12'>
-                    <FieldLabel>Subject</FieldLabel>
-                    <input type='text' name='subject' />
-                  </div>
-
-                  <div className='form-group col-lg-12 col-sm-12 col-xs-12'>
-                    <FieldLabel>
-                      Message <sup>*</sup>
-                    </FieldLabel>
-                    <textarea name='message' />
-                  </div>
+  <LowerSection>
+    <AutoContainer>
+      <MediumContainer>
+        <div>
+          <h2>Send Your Message</h2>
+        </div>
+        <Column>
+          <DefaultForm>
+            <form
+              method='post'
+              action={action}
+              name='contact'
+              netlify-honeypot='bot-field'
+              data-netlify='true'
+            >
+              <input type='hidden' name='bot-field' />
+              <div className='row clearfix'>
+                <div className='form-group col-lg-6 col-md-6 col-xs-12'>
+                  <FieldLabel>
+                    Your Name <sup>*</sup>
+                  </FieldLabel>
+                  <input type='text' name='username' />
                 </div>
-                <ButtonWrapper>
-                  <button type='submit'>Send Message</button>
-                </ButtonWrapper>
-              </form>
-            </DefaultForm>
-          </Column>
-        </MediumContainer>
-      </AutoContainer>
-    </LowerSection>
-  </>
+
+                <div className='form-group col-lg-6 col-md-6 col-xs-12'>
+                  <FieldLabel>
+                    Your E-Mail <sup>*</sup>
+                  </FieldLabel>
+                  <input type='email' name='email' />
+                </div>
+
+                <div className='form-group col-lg-6 col-md-6 col-xs-12'>
+                  <FieldLabel>Phone Number</FieldLabel>
+                  <input type='text' name='phone' required />
+                </div>
+
+                <div className='form-group col-lg-6 col-md-6 col-xs-12'>
+                  <FieldLabel>Subject</FieldLabel>
+                  <input type='text' name='subject' />
+                </div>
+
+                <div className='form-group col-lg-12 col-sm-12 col-xs-12'>
+                  <FieldLabel>
+                    Message <sup>*</sup>
+                  </FieldLabel>
+                  <textarea name='message' />
+                </div>
+              </div>
+              <ButtonWrapper>
+                <button type='submit'>Send Message</button>
+              </ButtonWrapper>
+            </form>
+          </DefaultForm>
+        </Column>
+      </MediumContainer>
+    </AutoContainer>
+  </LowerSection>
 )
 
 const ContactPage = props => (

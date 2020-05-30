@@ -53,7 +53,7 @@ const HeaderTop = ({ siteTitle, siteData }) => (
         <ul>
           <li>
             <Link to='/'>
-              {siteTitle} - Making businesses better one solution at a time
+              {siteTitle} - Making businesses better, one solution at a time
             </Link>
           </li>
         </ul>

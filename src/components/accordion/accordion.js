@@ -24,6 +24,7 @@ const Content = styled.div`
   display: ${props => (props.show ? 'block' : 'none')};
 
   h2 {
+    text-align: center;
     text-transform: capitalize;
   }
 `

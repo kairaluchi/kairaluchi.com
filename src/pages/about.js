@@ -76,8 +76,8 @@ const TagLine = styled.div`
   font-size: 28px;
   text-align: center;
   line-height: 1.5em;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 80px;
+  padding-bottom: 50px;
 `
 
 const LowerSection = styled.div`
@@ -98,6 +98,24 @@ const LowerSection = styled.div`
   }
 `
 
+const TopSection = styled.section`
+  padding-bottom: 80px;
+  text-align: center;
+
+  h3 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+
+  li {
+    font-size: 25px;
+    margin-bottom: 5px;
+    line-height: 1.5em;
+  }
+`
+
+
 const AboutWrapper = () => (
   <Wrapper>
     <AutoContainer>
@@ -106,6 +124,25 @@ const AboutWrapper = () => (
         solutions and business process improvements to customers worldwide. This
         is achieved through servant leadership.
       </TagLine>
+      <TopSection>
+        <AutoContainer>
+          <h3>We Serve First</h3>
+          <ul>
+            <li>
+              We listen and identify the needs of our customers and put those
+              needs first
+            </li>
+            <li>
+              We help and empower our customers to develop and achieve beyond
+              expectation
+            </li>
+            <li>
+              We strive for continuous improvement, because the bar for excellence
+              can always be increased
+            </li>
+          </ul>
+        </AutoContainer>
+      </TopSection>
     </AutoContainer>
     <ColumnSection className='row clearfix'>
       <AutoContainer>
