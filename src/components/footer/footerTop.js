@@ -26,13 +26,25 @@ const LeftColumn = ({ siteData }) => (
             training and events..
           </p>
           <SocialLinks className='social-links'>
-            <a href='/'>
+            <a
+              href={siteData.linkedIn}
+              target='_blank'
+              rel='noopener noreferrer'
+            >
               <FaLinkedin />
             </a>
-            <a href='/'>
+            <a
+              href={siteData.facebook}
+              target='_blank'
+              rel='noopener noreferrer'
+            >
               <FaFacebook />
             </a>
-            <a href='/'>
+            <a
+              href={siteData.twitter}
+              target='_blank'
+              rel='noopener noreferrer'
+            >
               <FaTwitter />
             </a>
           </SocialLinks>

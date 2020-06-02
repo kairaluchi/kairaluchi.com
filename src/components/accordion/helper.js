@@ -9,5 +9,5 @@ export const ContentWrapper = styled.div``
 
 export const Wrapper = styled.div`
   padding-top: 80px;
-  padding-bottom: 80px;
+  padding-bottom: 30px;
 `

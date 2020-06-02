@@ -26,6 +26,9 @@ export const StateProvider = ({ children, reducer }) => {
             address
             workingHours
             phone
+            linkedIn
+            facebook
+            twitter
           }
         }
       }
