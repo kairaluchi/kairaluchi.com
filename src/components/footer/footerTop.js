@@ -14,7 +14,7 @@ import {
   SocialLinks
 } from './helper'
 
-const LeftColumn = ({ siteData }) => (
+const LeftColumn = ({ siteData }) => console.log(siteData) || (
   <div className='col-md-6 col-sm-12 col-xs-12'>
     <div className='row clearfix'>
       <Column className='col-lg-6 col-sm-6 col-xs-12 column'>
@@ -26,13 +26,13 @@ const LeftColumn = ({ siteData }) => (
             training and events..
           </p>
           <SocialLinks className='social-links'>
-            <a href='/'>
+            <a href={siteData.linkedIn} target='_blank' rel='noopener noreferrer'>
               <FaLinkedin />
             </a>
-            <a href='/'>
+            <a href={siteData.facebook} target='_blank' rel='noopener noreferrer'>
               <FaFacebook />
             </a>
-            <a href='/'>
+            <a href={siteData.twitter} target='_blank' rel='noopener noreferrer'>
               <FaTwitter />
             </a>
           </SocialLinks>

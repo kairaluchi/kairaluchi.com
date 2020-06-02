@@ -24,6 +24,8 @@ const Content = styled.div`
   display: ${props => (props.show ? 'block' : 'none')};
 
   h2 {
+    font-weight: 600;
+    font-size: 34px;
     text-align: center;
     text-transform: capitalize;
   }
