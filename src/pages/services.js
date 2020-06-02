@@ -39,24 +39,24 @@ const Widget = styled.div`
   margin-left: 15px;
   margin-right: -8px;
   text-align: center;
-  
+
   h4 {
     font-size: 20px;
   }
-  
+
   span {
     display: block;
     font-size: 20px;
     line-height: 2em;
   }
-  
+
   ul {
     li {
       color: #247fe1;
       font-size: 18px;
       padding-top: 5px;
       padding-bottom: 5px;
-      
+
       svg {
         margin-right: 5px;
         vertical-align: middle;
@@ -65,7 +65,10 @@ const Widget = styled.div`
   }
 `
 
-const ContactUs = ({ phone = '(443) 364-8515', email = 'info@kairaluchi.com' }) => (
+const ContactUs = ({
+  phone = '(443) 364-8515',
+  email = 'info@kairaluchi.com'
+}) => (
   <Wrapper>
     <AutoContainer>
       <div className='row'>
@@ -74,8 +77,14 @@ const ContactUs = ({ phone = '(443) 364-8515', email = 'info@kairaluchi.com' }) 
             <h4>Have any Questions?</h4>
             <span>Contact Us:</span>
             <ul>
-              <li><RiPhoneLine />{phone}</li>
-              <li><RiMailLine />{email}</li>
+              <li>
+                <RiPhoneLine />
+                {phone}
+              </li>
+              <li>
+                <RiMailLine />
+                {email}
+              </li>
             </ul>
           </Widget>
         </div>
