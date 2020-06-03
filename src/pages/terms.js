@@ -7,6 +7,7 @@ import { AutoContainer } from '../components/common'
 const TermsWrapper = styled.div`
   margin-top: 80px;
   margin-bottom: 80px;
+  font-size: 18px;
 
   h2 {
     font-weight: 600;
@@ -42,14 +43,16 @@ const TermsWrapper = styled.div`
     }
   }
 
-  p {
-    font-size: 18px;
+  span {
+    display: block;
+    padding-bottom: 20px;
   }
 `
 
 const Terms = () => (
   <AutoContainer>
     <TermsWrapper>
+      <span>Last updated: May 25, 2020</span>
       <p>
         Please read these terms and conditions carefully before using Our
         Service.

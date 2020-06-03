@@ -7,6 +7,7 @@ import { AutoContainer } from '../components/common'
 const PrivacyWrapper = styled.div`
   margin-top: 80px;
   margin-bottom: 80px;
+  font-size: 18px;
 
   h2 {
     font-weight: 600;
@@ -34,22 +35,23 @@ const PrivacyWrapper = styled.div`
 
   ul {
     padding-left: 60px;
-    font-size: 18px;
     padding-bottom: 10px;
 
     li {
       list-style: outside;
     }
   }
-
-  p {
-    font-size: 18px;
+  
+  span {
+    display: block;
+    padding-bottom: 20px;
   }
 `
 
 const Privacy = () => (
   <AutoContainer>
     <PrivacyWrapper>
+      <span>Last updated: May 26, 2020</span>
       <p>
         This Privacy Policy describes Our policies and procedures on the
         collection, use and disclosure of Your information when You use the
