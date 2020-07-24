@@ -8,8 +8,6 @@ const slideDisplayCss = css`
   width: 80%;
   height: 100%;
   top: 10%;
-  margin-left: 150px;
-  margin-right: 150px;
   color: #ffffff;
 `
 

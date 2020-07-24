@@ -1,22 +1,31 @@
 import React from 'react'
-import styled from 'styled-components'
-import { RiPhoneLine, RiMailLine } from 'react-icons/ri'
 import Layout from '../components/layout'
 import Seo from '../components/seo'
 import Accordion from '../components/accordion'
-import { AutoContainer } from '../components/common'
 
 const data = [
   {
     page: 'Software Engineering',
-    content: ''
+    content: `
+    <p>Adaptability is essential for navigating today’s dynamic and constantly changing world. This also means your software must be able to adapt to your constantly developing business.</p>
+    <p>Our skilled and talented team will work with you to understand your needs, challenges and vision to ensure the best solution is implemented which is tailored to your Company.</p>
+    <p>Kaira Luchi customizes a Software Development Life Cycle (SDLC) and effective Project Management methodologies such as Agile, in order to achieve the needs of our customer.</p>
+    <h3>Capabilities</h3>
+    <p>Our services covers the following from development to data management, quality engineering and more.</p>
+    <h4>Custom Software engineering</h4>
+    <p>Kaira Luchi listens to the needs of your business to provide a range of custom software engineering services which matches your vision. These include the following:</p>
+    <ul>
+        <li>Development consulting</li>
+        <li>Architecture design</li>
+        <li>Custom Web Application Development</li>
+        <li>Custom Mobile Application Development</li>
+        <li>Custom Database Development</li>
+        <li>User Experience and Design</li>
+    </ul>
+    `
   },
   {
     page: 'DevOps and Automation',
-    content: ''
-  },
-  {
-    page: 'Cloud Enablement',
     content: ''
   },
   {
@@ -29,75 +38,10 @@ const data = [
   }
 ]
 
-const Wrapper = styled.div`
-  margin-bottom: 80px;
-`
-
-const Widget = styled.div`
-  background: #f3f3f3;
-  padding: 30px;
-  margin-left: 15px;
-  margin-right: -8px;
-  text-align: center;
-
-  h4 {
-    font-size: 20px;
-  }
-
-  span {
-    display: block;
-    font-size: 20px;
-    line-height: 2em;
-  }
-
-  ul {
-    li {
-      color: #247fe1;
-      font-size: 18px;
-      padding-top: 5px;
-      padding-bottom: 5px;
-
-      svg {
-        margin-right: 5px;
-        vertical-align: middle;
-      }
-    }
-  }
-`
-
-const ContactUs = ({
-  phone = '(443) 364-8515',
-  email = 'info@kairaluchi.com'
-}) => (
-  <Wrapper>
-    <AutoContainer>
-      <div className='row'>
-        <div className='col-xs-12 col-md-3'>
-          <Widget>
-            <h4>Have any Questions?</h4>
-            <span>Contact Us:</span>
-            <ul>
-              <li>
-                <RiPhoneLine />
-                {phone}
-              </li>
-              <li>
-                <RiMailLine />
-                {email}
-              </li>
-            </ul>
-          </Widget>
-        </div>
-      </div>
-    </AutoContainer>
-  </Wrapper>
-)
-
 const ServicesPage = props => (
   <Layout page='Services' {...props}>
     <Seo title='Services' />
     <Accordion data={data} />
-    <ContactUs />
   </Layout>
 )
 

@@ -6,6 +6,7 @@ import Slide from './slide'
 import SliderDisplay from './slideDisplay'
 import Arrow from './arrow'
 import Dots from './dots'
+import { AutoContainer } from '../common'
 
 const sliderCSS = css`
   position: relative;
@@ -49,7 +50,7 @@ const Slider = props => {
     })
 
   const smoothTransition = () => {
-    let _slides = []
+    let _slides
 
     if (activeSlide === slides.length - 1) {
       _slides = [slides[slides.length - 2], lastSlide, firstSlide]
@@ -126,7 +127,7 @@ const Slider = props => {
       <Arrow direction='left' handleClick={prevSlide} />
       <Arrow direction='right' handleClick={nextSlide} />
       <Dots slides={slides} activeSlide={activeSlide} />
-      <SliderDisplay activeSlide={activeSlide} displays={displays} />
+      <AutoContainer><SliderDisplay activeSlide={activeSlide} displays={displays} /></AutoContainer>
     </div>
   )
 }

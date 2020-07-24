@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { AccordionItem, AccordionButton } from './accordion'
-import { Wrapper, ButtonWrapper, ContentWrapper } from './helper'
+import { Wrapper, ButtonWrapper, ContentWrapper, ContactWidget } from './helper'
 import { AutoContainer } from '../common'
 
 const defaultData = [
@@ -35,6 +35,7 @@ const AccordionWrapper = ({ data = defaultData }) => {
               page={page}
             />
           ))}
+          <ContactWidget />
         </ButtonWrapper>
         <ContentWrapper className='col-md-9 col-xs-12'>
           {data.map(({ page, content }) => (
