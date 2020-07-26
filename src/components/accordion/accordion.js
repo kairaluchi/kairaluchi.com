@@ -34,19 +34,38 @@ const Content = styled.div`
   div {
     font-size: 1.8rem;
     
+    div {
+      margin-bottom: 30px;
+      
+      p {
+        text-align: justify;
+        line-height: 1.8em;
+        margin-bottom: 10px;
+      }
+    }
+    
     h3 {
       font-weight: 600;
-      font-size: 3rem;
+      font-size: 3.2rem;
     }
+    
     
     h4 {
       font-weight: 550;
-      font-size: 2.2rem;
+      font-size: 2.6rem;
     }
     
     p {
-      margin-bottom: 20px;
       text-align: justify;
+      line-height: 1.8em;
+      margin-bottom: 20px;
+    }
+    
+    ul {
+      li {
+        list-style: inside;
+        margin-bottom: 10px;
+      }
     }
   }
 `
