@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { RiArrowRightSLine } from 'react-icons/ri'
+import { RiArrowRightSLine } from "react-icons/ri";
 
 const Button = styled.button`
   color: ${props => (props.show ? '#247fe1' : '#777777')};
@@ -25,9 +25,48 @@ const Content = styled.div`
 
   h2 {
     font-weight: 600;
-    font-size: 34px;
+    font-size: 4rem;
     text-align: center;
     text-transform: capitalize;
+    margin-bottom: 20px;
+  }
+  
+  div {
+    font-size: 1.8rem;
+    
+    div {
+      margin-bottom: 30px;
+      
+      p {
+        text-align: justify;
+        line-height: 1.8em;
+        margin-bottom: 10px;
+      }
+    }
+    
+    h3 {
+      font-weight: 600;
+      font-size: 3.2rem;
+    }
+    
+    
+    h4 {
+      font-weight: 550;
+      font-size: 2.6rem;
+    }
+    
+    p {
+      text-align: justify;
+      line-height: 1.8em;
+      margin-bottom: 20px;
+    }
+    
+    ul {
+      li {
+        list-style: inside;
+        margin-bottom: 10px;
+      }
+    }
   }
 `
 
