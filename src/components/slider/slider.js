@@ -127,7 +127,9 @@ const Slider = props => {
       <Arrow direction='left' handleClick={prevSlide} />
       <Arrow direction='right' handleClick={nextSlide} />
       <Dots slides={slides} activeSlide={activeSlide} />
-      <AutoContainer><SliderDisplay activeSlide={activeSlide} displays={displays} /></AutoContainer>
+      <AutoContainer>
+        <SliderDisplay activeSlide={activeSlide} displays={displays} />
+      </AutoContainer>
     </div>
   )
 }

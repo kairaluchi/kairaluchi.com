@@ -41,7 +41,7 @@ const PrivacyWrapper = styled.div`
       list-style: outside;
     }
   }
-  
+
   span {
     display: block;
     padding-bottom: 20px;
