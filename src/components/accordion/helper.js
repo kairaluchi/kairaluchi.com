@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import { RiMailLine, RiPhoneLine } from "react-icons/ri";
-import React from "react";
+import { RiMailLine, RiPhoneLine } from 'react-icons/ri'
+import React from 'react'
 
 export const ButtonWrapper = styled.div`
   display: flex;

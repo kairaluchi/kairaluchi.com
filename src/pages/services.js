@@ -6,6 +6,7 @@ import Accordion from '../components/accordion'
 const data = [
   {
     page: 'Software Engineering',
+    path: 'software-engineering',
     content: `
     <div>
       <p>Adaptability is essential for navigating today’s dynamic and constantly changing world. This also means your software must be able to adapt to your constantly developing business.</p>
@@ -44,12 +45,14 @@ const data = [
   },
   {
     page: 'DevOps and Automation',
+    path: 'devops-and-automation',
     content: `
     <p>We have a QA team working on every project. They ensure proper protection from the very first release and specialise in the latest automation tools, which allow them to keep testing time at a minimum cost. Functional, performance, regression or any other test – we will do it for you! We are also experienced in Continuous Delivery and Continuous Integration solutions.</p>
     `
   },
   {
     page: 'Continuous improvement',
+    path: 'continuous-improvement',
     content: `
       <p>Collaborating with Kaira Luchi is a unique experience, filled with passion, excellence and innovation.</p>   
       <p>Continuous improvement is at the heart of what we do. Continuous improvements of processes, businesses and oneself. If there’s an opportunity for improvement, there’s a place for Kaira Luchi</p>
@@ -67,6 +70,7 @@ const data = [
   },
   {
     page: 'Organizational Excellence',
+    path: 'organizational-excellence',
     content: `
       <p>Achieving Organizational Excellence is coveted for all businesses, and Kaira Luchi can help propel your journey to excellence through supporting, implementation and/or training in:</p>
       <ul>
