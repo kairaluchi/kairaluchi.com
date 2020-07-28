@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import subMenuIcon from '../../images/icons/submenu-icon.png'
 
 export const AutoContainer = styled.div`
@@ -158,6 +158,10 @@ export const Navigation = styled.ul`
 export const NavbarCollapse = styled.div`
   padding: 0px;
 
+  @media (max-width: 768px) {
+    display: ${({ open }) => open ? 'block !important' : 'none !important'};
+  }
+  
   > ul {
     li {
       &.dropdown {
@@ -179,6 +183,23 @@ export const NavbarCollapse = styled.div`
   }
 `
 
+const bounceMenu = css`
+  @media (max-width: 768px) {
+     width: 200px;
+     text-align: right;
+  }
+`
+
+const mainMenu = css`
+  @media (max-width: 768px) {
+     width: 200px;
+     text-align: left;
+  }
+`
+
 export const MainMenu = styled.nav`
   position: relative;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  ${({ isBounceMenu }) => (isBounceMenu ? bounceMenu : mainMenu)}
 `

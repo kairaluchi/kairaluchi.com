@@ -38,12 +38,22 @@ const TopLeft = styled.div`
   position: relative;
   float: left;
   padding: 10px 0px;
+  
+  @media (max-width: 768px) {
+    float: none;
+    text-align: center;
+  }
 `
 
 const TopRight = styled.div`
   position: relative;
   float: right;
   padding: 10px 0px;
+  
+  @media (max-width: 768px) {
+    float: none;
+    text-align: center;
+  }
 `
 
 const HeaderTop = ({ siteTitle, siteData }) => (

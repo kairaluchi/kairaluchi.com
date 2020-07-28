@@ -36,9 +36,21 @@ export const StateProvider = ({ children, reducer }) => {
   `)
 
   const { allCloudinaryMedia, site, allDataJson } = data
+
+  const num = (url = '') => {
+    const [name] = url.split('/').slice(-1)[0].split('.')
+    return Number(name.split('_')[0].slice(-1))
+  }
+
   const slides = allCloudinaryMedia.edges
-    .filter(image => image.node.public_id.split('/').includes('test-slides'))
+    .filter(image => image.node.public_id.split('/').includes('slides'))
     .map(image => image.node.secure_url)
+    .sort((a, b) => {
+      if (num(a) === num(b)) return 0
+      else if (num(a) > num(b)) return -1
+      else return 1
+    })
+
   const [defaultImage] = data.allCloudinaryMedia.edges.filter(image =>
     image.node.public_id.split('/').includes('background')
   )

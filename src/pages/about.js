@@ -1,4 +1,5 @@
 import React from 'react'
+import { Row, Col } from 'reactstrap'
 import styled from 'styled-components'
 import Layout from '../components/layout'
 import Seo from '../components/seo'
@@ -23,7 +24,7 @@ const Wrapper = styled.div`
   position: relative;
 `
 
-const Column = styled.div`
+const Column = styled(Col)`
   position: relative;
 `
 
@@ -143,19 +144,21 @@ const AboutWrapper = () => (
         </AutoContainer>
       </TopSection>
     </AutoContainer>
-    <ColumnSection className='row clearfix'>
+    <ColumnSection>
       <AutoContainer>
-        {aboutUsColumn.map(({ num, title, text }) => (
-          <Column key={num} className='col-md-6 col-sm-6 col-xs-12'>
-            <InnerBox>
-              <Count>{num}</Count>
-              <TitleBox>
-                <h3>{title}</h3>
-              </TitleBox>
-              <Text>{text}</Text>
-            </InnerBox>
-          </Column>
-        ))}
+        <Row>
+          {aboutUsColumn.map(({ num, title, text }) => (
+            <Column md={6} sm={6} xs={12} key={num}>
+              <InnerBox>
+                <Count>{num}</Count>
+                <TitleBox>
+                  <h3>{title}</h3>
+                </TitleBox>
+                <Text>{text}</Text>
+              </InnerBox>
+            </Column>
+          ))}
+        </Row>
       </AutoContainer>
     </ColumnSection>
     <LowerSection>
