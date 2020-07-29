@@ -97,7 +97,11 @@ const HeaderLower = ({ menu }) => {
               <Navigation className='navbar-nav mr-auto'>
                 {menu.map(({ name, link, path }) => (
                   <li key={name}>
-                    <Link to={link} activeClassName='current' className={path === urlPath ? 'current': ''}>
+                    <Link
+                      to={link}
+                      activeClassName='current'
+                      className={path === urlPath ? 'current' : ''}
+                    >
                       {name}
                     </Link>
                   </li>

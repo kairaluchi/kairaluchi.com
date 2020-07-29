@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
-import { useLocation } from "@reach/router"
+import { useLocation } from '@reach/router'
 import { Link } from 'gatsby'
 import styled, { css } from 'styled-components'
 import logo from '../../images/logo.png'
@@ -114,7 +114,11 @@ const HeaderBounce = ({ showHeader, siteTitle, menu }) => {
                 <Navigation contrast className='navbar-nav mr-auto'>
                   {menu.map(({ name, link, path }) => (
                     <li key={name}>
-                      <Link to={link} activeClassName='current' className={path === urlPath ? 'current': ''}>
+                      <Link
+                        to={link}
+                        activeClassName='current'
+                        className={path === urlPath ? 'current' : ''}
+                      >
                         {name}
                       </Link>
                     </li>

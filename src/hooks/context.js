@@ -11,7 +11,10 @@ export const StateProvider = ({ children, reducer }) => {
           title
         }
       }
-      allCloudinaryMedia(filter: {public_id: {regex: "/^slide/"}}, sort: {fields: public_id, order: DESC}){
+      allCloudinaryMedia(
+        filter: { public_id: { regex: "/^slide/" } }
+        sort: { fields: public_id, order: DESC }
+      ) {
         edges {
           node {
             public_id
@@ -32,7 +35,7 @@ export const StateProvider = ({ children, reducer }) => {
           }
         }
       }
-      cloudinaryMedia(public_id: {regex: "/^background/"}) {
+      cloudinaryMedia(public_id: { regex: "/^background/" }) {
         secure_url
       }
     }
@@ -40,8 +43,7 @@ export const StateProvider = ({ children, reducer }) => {
 
   const { allCloudinaryMedia, site, allDataJson, cloudinaryMedia } = data
 
-  const slides = allCloudinaryMedia.edges
-    .map(image => image.node.secure_url)
+  const slides = allCloudinaryMedia.edges.map(image => image.node.secure_url)
 
   const defaultImage = cloudinaryMedia.secure_url
   const siteTitle = site.siteMetadata.title
