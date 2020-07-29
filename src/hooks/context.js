@@ -11,7 +11,10 @@ export const StateProvider = ({ children, reducer }) => {
           title
         }
       }
-      allCloudinaryMedia {
+      allCloudinaryMedia(
+        filter: { public_id: { regex: "/^slide/" } }
+        sort: { fields: public_id, order: DESC }
+      ) {
         edges {
           node {
             public_id
@@ -32,28 +35,17 @@ export const StateProvider = ({ children, reducer }) => {
           }
         }
       }
+      cloudinaryMedia(public_id: { regex: "/^background/" }) {
+        secure_url
+      }
     }
   `)
 
-  const { allCloudinaryMedia, site, allDataJson } = data
+  const { allCloudinaryMedia, site, allDataJson, cloudinaryMedia } = data
 
-  const num = (url = '') => {
-    const [name] = url.split('/').slice(-1)[0].split('.')
-    return Number(name.split('_')[0].slice(-1))
-  }
+  const slides = allCloudinaryMedia.edges.map(image => image.node.secure_url)
 
-  const slides = allCloudinaryMedia.edges
-    .filter(image => image.node.public_id.split('/').includes('slides'))
-    .map(image => image.node.secure_url)
-    .sort((a, b) => {
-      if (num(a) === num(b)) return 0
-      else if (num(a) > num(b)) return -1
-      else return 1
-    })
-
-  const [defaultImage] = data.allCloudinaryMedia.edges.filter(image =>
-    image.node.public_id.split('/').includes('background')
-  )
+  const defaultImage = cloudinaryMedia.secure_url
   const siteTitle = site.siteMetadata.title
   const [siteData] = allDataJson.edges.map(item => item.node)
   const initialState = { slides, siteTitle, defaultImage, siteData }
