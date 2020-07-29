@@ -13,12 +13,16 @@ const LowerHeader = styled.div`
   z-index: 5;
   
   @media (max-width: 768px) {
-     padding: 5px 0 5px 0;
+     padding: 12px 0 12px 0;
   }
 `
 
 const NavOuter = styled.div`
   position: relative;
+`
+
+const ToggleButton = styled.button`
+  border-color: rgba(255, 255, 255, 0.15) !important;
 `
 
 const GetBtn = styled.div`
@@ -70,7 +74,7 @@ const HeaderLower = ({ menu }) => {
       <AutoContainer className='auto-container'>
         <NavOuter className='clearfix'>
           <MainMenu className="navbar navbar-expand-md navbar-light">
-            <button
+            <ToggleButton
               className="navbar-toggler"
               type="button"
               data-toggle="collapse"
@@ -81,7 +85,7 @@ const HeaderLower = ({ menu }) => {
               onClick={toggle}
             >
               <span className="navbar-toggler-icon" />
-            </button>
+            </ToggleButton>
             <NavbarCollapse className="collapse navbar-collapse" id="navbarSupportedContent" open={open}>
               <Navigation className='navbar-nav mr-auto'>
                 {menu.map(({ name, link }) => (

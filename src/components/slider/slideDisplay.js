@@ -9,6 +9,10 @@ const slideDisplayCss = css`
   height: 100%;
   top: 10%;
   color: #ffffff;
+  @media (max-width: 768px) {
+     width: 70%;
+     height: 40%;
+  }
 `
 
 const Tag = styled.h3`
@@ -36,6 +40,11 @@ const Title = styled.h1`
   font-weight: 700;
   width: 600px;
   margin-bottom: 20px;
+  
+  @media (max-width: 768px) {
+    font-size: 2.4rem;
+    width: 400px;
+  }
 `
 
 const Caption = styled.p`

@@ -42,6 +42,11 @@ export const Navigation = styled.ul`
         border-color: #247fe1;
         opacity: 1;
       }
+      
+      @media (max-width: 768px) {
+        ${({ isBounceMenu }) => (!isBounceMenu && 'padding-left: 0px')}
+      }
+      
     }
 
     &.dropdown {
