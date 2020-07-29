@@ -22,18 +22,22 @@ const MainHeader = styled.div`
 const menu = [
   {
     name: 'Home',
+    path: '',
     link: '/'
   },
   {
     name: 'Services',
+    path: 'services',
     link: '/services'
   },
   {
     name: 'About Us',
+    path: 'about',
     link: '/about'
   },
   {
     name: 'Contact Us',
+    path: 'contact',
     link: '/contact'
   }
 ]

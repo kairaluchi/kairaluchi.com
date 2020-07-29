@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useLocation } from '@reach/router'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
@@ -64,6 +65,8 @@ const ApptBtn = styled(Link)`
 
 const HeaderLower = ({ menu }) => {
   const [open, setOpen] = useState(false)
+  const { pathname } = useLocation()
+  const urlPath = pathname.replace(/^\/|\/$/g, '')
 
   const toggle = () => {
     setOpen(!open)
@@ -92,9 +95,9 @@ const HeaderLower = ({ menu }) => {
               open={open}
             >
               <Navigation className='navbar-nav mr-auto'>
-                {menu.map(({ name, link }) => (
+                {menu.map(({ name, link, path }) => (
                   <li key={name}>
-                    <Link to={link} activeClassName='current'>
+                    <Link to={link} activeClassName='current' className={path === urlPath ? 'current': ''}>
                       {name}
                     </Link>
                   </li>

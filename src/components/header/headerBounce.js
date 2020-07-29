@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
+import { useLocation } from "@reach/router"
 import { Link } from 'gatsby'
 import styled, { css } from 'styled-components'
 import logo from '../../images/logo.png'
@@ -72,6 +73,8 @@ const MenuToggle = styled.button`
 
 const HeaderBounce = ({ showHeader, siteTitle, menu }) => {
   const [open, setOpen] = useState(false)
+  const { pathname } = useLocation()
+  const urlPath = pathname.replace(/^\/|\/$/g, '')
 
   const toggle = () => {
     setOpen(!open)
@@ -109,9 +112,9 @@ const HeaderBounce = ({ showHeader, siteTitle, menu }) => {
                 open={open}
               >
                 <Navigation contrast className='navbar-nav mr-auto'>
-                  {menu.map(({ name, link }) => (
+                  {menu.map(({ name, link, path }) => (
                     <li key={name}>
-                      <Link to={link} activeClassName='current'>
+                      <Link to={link} activeClassName='current' className={path === urlPath ? 'current': ''}>
                         {name}
                       </Link>
                     </li>
