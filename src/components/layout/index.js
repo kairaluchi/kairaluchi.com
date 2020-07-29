@@ -6,6 +6,8 @@ import Footer from '../footer'
 import { StateProvider, useStateValue } from '../../hooks/context'
 import { reducer } from '../../hooks/reducer'
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 const PageWrapper = styled.div`
   position: relative;
   margin: 0 auto;
@@ -38,7 +40,7 @@ const PageSection = styled.section`
     top: 0px;
     width: 100%;
     height: 100%;
-    background: rgba(61, 63, 63, 0.95);
+    background: rgba(61, 63, 63, 0.85);
   }
 
   h1 {

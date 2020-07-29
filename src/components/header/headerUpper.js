@@ -18,17 +18,48 @@ const UpperHeader = styled.div`
   z-index: 5;
 `
 
+const Wrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+`
+
 const Container = styled.div`
-  position: relative;
+  display: flex;
+  flex-direction: row;
+  
+  div {
+    :nth-child(even) {
+      margin-left: 15px;
+      margin-right: 15px;
+      
+      @media (max-width: 576px) {
+        margin-left: 0px;
+        margin-right: 0px;
+      }
+    }
+  }
 `
 
 const UpperColumn = styled.div`
   position: relative;
-  float: left;
-  min-width: 80px;
-  margin-left: 40px;
   padding-left: 50px;
   padding-top: 25px;
+  
+  @media (max-width: 576px) {
+    width: 50%;
+    float: left;
+  }
+  
+  @media (max-width: 768px) {
+    width: 50%;
+    float: left;
+  }
+  
   a {
     color: #555555;
     transition: all 0.5s ease;
@@ -46,8 +77,7 @@ const UpperColumn = styled.div`
 const IconBox = styled.div`
   position: absolute;
   left: 0px;
-  top: 20px;
-  width: 45px;
+  top: 10px;
   line-height: 75px;
   color: #4a5c7a;
   font-size: 38px;
@@ -56,10 +86,25 @@ const IconBox = styled.div`
   -ms-transition: all 500ms ease;
   -o-transition: all 500ms ease;
   transition: all 500ms ease;
+  
+  @media (max-width: 576px) {
+    font-size: 25px;
+  }
+  
+  @media (max-width: 768px) {
+    font-size: 38px;
+  }
+  
+  @media (max-width: 992px) {
+    font-size: 30px;
+  }
 `
 
 const Logo = styled.div`
   line-height: 6;
+  @media (max-width: 768px) {
+    text-align: center;
+  }
 `
 
 const columnBoxes = [
@@ -98,18 +143,18 @@ const UpperColumnBox = ({ name, value, Icon }) => (
 const HeaderUpper = ({ siteTitle, siteData }) => (
   <UpperHeader>
     <AutoContainer>
-      <div className='clearfix'>
-        <Logo className='pull-left'>
+      <Wrapper>
+        <Logo>
           <Link to='/'>
             <img width='220px' src={logo} alt={siteTitle} title={siteTitle} />
           </Link>
         </Logo>
-        <Container className='pull-right'>
+        <Container>
           {columnBoxes.map(({ key, value, ...rest }) => (
             <UpperColumnBox key={key} value={siteData[value]} {...rest} />
           ))}
         </Container>
-      </div>
+      </Wrapper>
     </AutoContainer>
   </UpperHeader>
 )

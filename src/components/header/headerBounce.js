@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 import styled, { css } from 'styled-components'
@@ -45,50 +45,79 @@ const BounceHeader = styled.div`
   -ms-transition: all 500ms ease;
   -o-transition: all 500ms ease;
   ${({ showHeader }) => (showHeader ? headerAnimation : '')}
+  
+  @media (max-width: 768px) {
+     padding: 5px 0 5px 0;
+  }
 `
 
 const Logo = styled.div`
   padding: 9px 0px 2px;
+  
+  @media (max-width: 768px) {
+     padding: 0;
+  }
 `
 
-const HeaderBounce = ({ showHeader, siteTitle, menu }) => (
-  <BounceHeader showHeader={showHeader}>
-    <AutoContainer className='clearfix'>
-      <Logo className='pull-left'>
-        <Link to='/' className='img-responsive'>
-          <img width='160px' src={logo} alt={siteTitle} title={siteTitle} />
-        </Link>
-      </Logo>
-      <div className='right-col pull-right'>
-        <MainMenu className='main-menu'>
-          <div className='navbar-header'>
-            <button
-              type='button'
-              className='navbar-toggle'
-              data-toggle='collapse'
-              data-target='.navbar-collapse'
-            >
-              <span className='icon-bar' />
-              <span className='icon-bar' />
-              <span className='icon-bar' />
-            </button>
+const Wrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+`
+
+const MenuToggle = styled.button`
+  @media (max-width: 768px) {
+     margin-left: 100px;
+  }
+`
+
+const HeaderBounce = ({ showHeader, siteTitle, menu }) => {
+  const [open, setOpen] = useState(false)
+
+  const toggle = () => {
+    setOpen(!open)
+  }
+
+  return (
+    <BounceHeader showHeader={showHeader}>
+      <AutoContainer className='clearfix'>
+        <Wrapper>
+          <Logo>
+            <Link to='/' className='img-responsive'>
+              <img width='160px' src={logo} alt={siteTitle} title={siteTitle} />
+            </Link>
+          </Logo>
+          <div>
+            <MainMenu className='navbar navbar-expand-md navbar-light' isBounceMenu>
+              <MenuToggle
+                className="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+                onClick={toggle}
+              >
+                <span className="navbar-toggler-icon" />
+              </MenuToggle>
+              <NavbarCollapse className="collapse navbar-collapse" id="navbarSupportedContent" open={open}>
+                <Navigation contrast className='navbar-nav mr-auto'>
+                  {menu.map(({ name, link }) => (
+                    <li key={name}>
+                      <Link to={link} activeClassName='current'>
+                        {name}
+                      </Link>
+                    </li>
+                  ))}
+                </Navigation>
+              </NavbarCollapse>
+            </MainMenu>
           </div>
-          <NavbarCollapse className='navbar-collapse collapse clearfix'>
-            <Navigation contrast className='clearfix'>
-              {menu.map(({ name, link }) => (
-                <li key={name}>
-                  <Link to={link} activeClassName='current'>
-                    {name}
-                  </Link>
-                </li>
-              ))}
-            </Navigation>
-          </NavbarCollapse>
-        </MainMenu>
-      </div>
-    </AutoContainer>
-  </BounceHeader>
-)
+        </Wrapper>
+      </AutoContainer>
+    </BounceHeader>
+  )
+}
 
 HeaderBounce.propTypes = {
   showHeader: PropTypes.bool.isRequired,

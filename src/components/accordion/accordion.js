@@ -25,33 +25,33 @@ const Content = styled.div`
 
   h2 {
     font-weight: 600;
-    font-size: 4rem;
+    font-size: 2.4rem;
     text-align: center;
     text-transform: capitalize;
     margin-bottom: 20px;
   }
 
   div {
-    font-size: 1.8rem;
+    font-size: 1.3rem;
 
     div {
       margin-bottom: 30px;
 
       p {
         text-align: justify;
-        line-height: 1.8em;
+        line-height: 1.5em;
         margin-bottom: 10px;
       }
     }
 
     h3 {
       font-weight: 600;
-      font-size: 3.2rem;
+      font-size: 2rem;
     }
 
     h4 {
       font-weight: 550;
-      font-size: 2.6rem;
+      font-size: 1.6rem;
     }
 
     p {
