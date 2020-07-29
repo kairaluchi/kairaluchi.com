@@ -45,17 +45,17 @@ const BounceHeader = styled.div`
   -ms-transition: all 500ms ease;
   -o-transition: all 500ms ease;
   ${({ showHeader }) => (showHeader ? headerAnimation : '')}
-  
+
   @media (max-width: 768px) {
-     padding: 5px 0 5px 0;
+    padding: 5px 0 5px 0;
   }
 `
 
 const Logo = styled.div`
   padding: 9px 0px 2px;
-  
+
   @media (max-width: 768px) {
-     padding: 0;
+    padding: 0;
   }
 `
 
@@ -66,7 +66,7 @@ const Wrapper = styled.div`
 
 const MenuToggle = styled.button`
   @media (max-width: 768px) {
-     margin-left: 100px;
+    margin-left: 100px;
   }
 `
 
@@ -87,20 +87,27 @@ const HeaderBounce = ({ showHeader, siteTitle, menu }) => {
             </Link>
           </Logo>
           <div>
-            <MainMenu className='navbar navbar-expand-md navbar-light' isBounceMenu>
+            <MainMenu
+              className='navbar navbar-expand-md navbar-light'
+              isBounceMenu
+            >
               <MenuToggle
-                className="navbar-toggler"
-                type="button"
-                data-toggle="collapse"
-                data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
+                className='navbar-toggler'
+                type='button'
+                data-toggle='collapse'
+                data-target='#navbarSupportedContent'
+                aria-controls='navbarSupportedContent'
+                aria-expanded='false'
+                aria-label='Toggle navigation'
                 onClick={toggle}
               >
-                <span className="navbar-toggler-icon" />
+                <span className='navbar-toggler-icon' />
               </MenuToggle>
-              <NavbarCollapse className="collapse navbar-collapse" id="navbarSupportedContent" open={open}>
+              <NavbarCollapse
+                className='collapse navbar-collapse'
+                id='navbarSupportedContent'
+                open={open}
+              >
                 <Navigation contrast className='navbar-nav mr-auto'>
                   {menu.map(({ name, link }) => (
                     <li key={name}>

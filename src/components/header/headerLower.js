@@ -11,9 +11,9 @@ const LowerHeader = styled.div`
   width: 100%;
   background: #3d3f43;
   z-index: 5;
-  
+
   @media (max-width: 768px) {
-     padding: 12px 0 12px 0;
+    padding: 12px 0 12px 0;
   }
 `
 
@@ -35,10 +35,10 @@ const GetBtn = styled.div`
   &:hover {
     background: #247fe1;
   }
-  
-   @media (max-width: 768px) {
-     height: 40px;
-   }
+
+  @media (max-width: 768px) {
+    height: 40px;
+  }
 `
 
 const ApptBtn = styled(Link)`
@@ -52,11 +52,11 @@ const ApptBtn = styled(Link)`
   font-size: 13px;
   color: #ffffff;
   text-transform: uppercase;
-  
+
   @media (max-width: 768px) {
     padding: 5px 0px;
   }
-   
+
   &:hover {
     color: #ffffff;
   }
@@ -73,24 +73,28 @@ const HeaderLower = ({ menu }) => {
     <LowerHeader className='header-lower'>
       <AutoContainer className='auto-container'>
         <NavOuter className='clearfix'>
-          <MainMenu className="navbar navbar-expand-md navbar-light">
+          <MainMenu className='navbar navbar-expand-md navbar-light'>
             <ToggleButton
-              className="navbar-toggler"
-              type="button"
-              data-toggle="collapse"
-              data-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
+              className='navbar-toggler'
+              type='button'
+              data-toggle='collapse'
+              data-target='#navbarSupportedContent'
+              aria-controls='navbarSupportedContent'
+              aria-expanded='false'
+              aria-label='Toggle navigation'
               onClick={toggle}
             >
-              <span className="navbar-toggler-icon" />
+              <span className='navbar-toggler-icon' />
             </ToggleButton>
-            <NavbarCollapse className="collapse navbar-collapse" id="navbarSupportedContent" open={open}>
+            <NavbarCollapse
+              className='collapse navbar-collapse'
+              id='navbarSupportedContent'
+              open={open}
+            >
               <Navigation className='navbar-nav mr-auto'>
                 {menu.map(({ name, link }) => (
                   <li key={name}>
-                    <Link to={link} activeClassName='current' >
+                    <Link to={link} activeClassName='current'>
                       {name}
                     </Link>
                   </li>

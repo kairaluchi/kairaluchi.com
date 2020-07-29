@@ -22,7 +22,7 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-  
+
   @media (max-width: 768px) {
     flex-direction: column;
   }
@@ -31,12 +31,12 @@ const Wrapper = styled.div`
 const Container = styled.div`
   display: flex;
   flex-direction: row;
-  
+
   div {
     :nth-child(even) {
       margin-left: 15px;
       margin-right: 15px;
-      
+
       @media (max-width: 576px) {
         margin-left: 0px;
         margin-right: 0px;
@@ -49,17 +49,17 @@ const UpperColumn = styled.div`
   position: relative;
   padding-left: 50px;
   padding-top: 25px;
-  
+
   @media (max-width: 576px) {
     width: 50%;
     float: left;
   }
-  
+
   @media (max-width: 768px) {
     width: 50%;
     float: left;
   }
-  
+
   a {
     color: #555555;
     transition: all 0.5s ease;
@@ -86,15 +86,15 @@ const IconBox = styled.div`
   -ms-transition: all 500ms ease;
   -o-transition: all 500ms ease;
   transition: all 500ms ease;
-  
+
   @media (max-width: 576px) {
     font-size: 25px;
   }
-  
+
   @media (max-width: 768px) {
     font-size: 38px;
   }
-  
+
   @media (max-width: 992px) {
     font-size: 30px;
   }

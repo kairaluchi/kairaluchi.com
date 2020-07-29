@@ -15,11 +15,11 @@ const arrowCss = css`
   cursor: pointer;
   align-items: center;
   transition: transform ease-in 0.1s;
-  
+
   @media (max-width: 768px) {
     top: 60%;
   }
-  
+
   &:hover {
     transform: scale(1.1);
   }
