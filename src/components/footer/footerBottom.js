@@ -15,10 +15,19 @@ const BottomFooter = styled.div`
   nav {
     position: relative;
 
+    @media (max-width: 768px) {
+      margin-top: 5px;
+    }
+
     li {
       position: relative;
       float: left;
       margin-left: 25px;
+
+      @media (max-width: 768px) {
+        margin-left: 0px;
+        margin-right: 25px;
+      }
 
       a {
         color: #b3b3b3;

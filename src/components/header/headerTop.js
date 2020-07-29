@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
+import { useMedia } from 'react-media'
 import { FaRegEnvelope } from 'react-icons/fa'
 import { AutoContainer } from './helper'
 
@@ -38,7 +39,7 @@ const TopLeft = styled.div`
   position: relative;
   float: left;
   padding: 10px 0px;
-  
+
   @media (max-width: 768px) {
     float: none;
     text-align: center;
@@ -49,38 +50,44 @@ const TopRight = styled.div`
   position: relative;
   float: right;
   padding: 10px 0px;
-  
+
   @media (max-width: 768px) {
     float: none;
     text-align: center;
   }
 `
 
-const HeaderTop = ({ siteTitle, siteData }) => (
-  <TopHeader>
-    <AutoContainer className='clearfix'>
-      <TopLeft>
-        <ul>
-          <li>
-            <Link to='/'>
-              {siteTitle} - Making businesses better, one solution at a time
-            </Link>
-          </li>
-        </ul>
-      </TopLeft>
-      <TopRight>
-        <ul>
-          <li>
-            <a href={`mailto:${siteData.email}`}>
-              <FaRegEnvelope className='icon' />
-              {` Email us at:  ${siteData.email}`}
-            </a>
-          </li>
-        </ul>
-      </TopRight>
-    </AutoContainer>
-  </TopHeader>
-)
+const HeaderTop = ({ siteTitle, siteData }) => {
+  const isMediumScreen = useMedia({ query: '(max-width: 768px)' })
+
+  return (
+    !isMediumScreen && (
+      <TopHeader>
+        <AutoContainer className='clearfix'>
+          <TopLeft>
+            <ul>
+              <li>
+                <Link to='/'>
+                  {siteTitle} - Making businesses better, one solution at a time
+                </Link>
+              </li>
+            </ul>
+          </TopLeft>
+          <TopRight>
+            <ul>
+              <li>
+                <a href={`mailto:${siteData.email}`}>
+                  <FaRegEnvelope className='icon' />
+                  {` Email us at:  ${siteData.email}`}
+                </a>
+              </li>
+            </ul>
+          </TopRight>
+        </AutoContainer>
+      </TopHeader>
+    )
+  )
+}
 
 HeaderTop.propTypes = {
   siteTitle: PropTypes.string.isRequired

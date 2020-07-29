@@ -42,6 +42,10 @@ export const Navigation = styled.ul`
         border-color: #247fe1;
         opacity: 1;
       }
+
+      @media (max-width: 768px) {
+        ${({ isBounceMenu }) => !isBounceMenu && 'padding-left: 0px'}
+      }
     }
 
     &.dropdown {
@@ -159,9 +163,9 @@ export const NavbarCollapse = styled.div`
   padding: 0px;
 
   @media (max-width: 768px) {
-    display: ${({ open }) => open ? 'block !important' : 'none !important'};
+    display: ${({ open }) => (open ? 'block !important' : 'none !important')};
   }
-  
+
   > ul {
     li {
       &.dropdown {
@@ -185,15 +189,15 @@ export const NavbarCollapse = styled.div`
 
 const bounceMenu = css`
   @media (max-width: 768px) {
-     width: 200px;
-     text-align: right;
+    width: 200px;
+    text-align: right;
   }
 `
 
 const mainMenu = css`
   @media (max-width: 768px) {
-     width: 200px;
-     text-align: left;
+    width: 200px;
+    text-align: left;
   }
 `
 
