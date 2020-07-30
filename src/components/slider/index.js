@@ -24,14 +24,14 @@ const displays = [
   },
   {
     tag: 'Welcome to Kaira Luchi',
-    title: 'Solving tomorrows challenges, today',
+    title: `Solving tomorrow's challenges, today`,
     caption:
       'Using new innovations in technology to help companies solve challenging problems'
   },
   {
     tag: 'Welcome to Kaira Luchi',
     title: 'Your vision + our expertise = Results',
-    caption: <LearnMore to='/services'>Learn More</LearnMore>
+    caption: <LearnMore to='/about'>Learn More</LearnMore>
   },
   {
     tag: 'Welcome to Kaira Luchi',
