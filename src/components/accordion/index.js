@@ -1,10 +1,13 @@
 import React, { useState } from 'react'
 import { useLocation } from '@reach/router'
+import { useMedia } from 'react-media'
 import { AccordionItem, AccordionButton } from './accordion'
 import { Wrapper, ButtonWrapper, ContentWrapper, ContactWidget } from './helper'
 import { AutoContainer } from '../common'
+import MobileView from './accordionMobile'
 
 const AccordionWrapper = ({ data }) => {
+  const isMediumScreen = useMedia({ query: '(max-width: 768px)' })
   const { pathname = '' } = useLocation()
   const [, , activePath] = pathname.split('/')
   const initialPage = data.find(({ path }) => path === activePath) || data[0]
@@ -18,7 +21,9 @@ const AccordionWrapper = ({ data }) => {
     window.history.pushState(null, page, url)
   }
 
-  return (
+  return isMediumScreen ? (
+    <MobileView data={data} />
+  ) : (
     <Wrapper>
       <AutoContainer className='row'>
         <ButtonWrapper className='col-md-3 col-xs-12'>
