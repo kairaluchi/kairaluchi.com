@@ -103,7 +103,7 @@ const RightColumn = ({ col1, col2, action }) => (
       </Column>
       <Column className='col-lg-6 col-sm-6 col-xs-12 column'>
         <div>
-          <h3>Subscribe Us</h3>
+          <h3>Subscribe</h3>
           <NewsLetter>
             <div>
               <p>Signup for our mailing list to get latest updates and news.</p>

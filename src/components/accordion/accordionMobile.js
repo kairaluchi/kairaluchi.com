@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import styled from 'styled-components'
 
 const Button = styled.button`
@@ -55,14 +55,17 @@ const Content = styled.div`
   }
 `
 
-const AccordionHeader = ({ toggle, label, title }) => {
-  const handleClick = () => toggle(label)
+const AccordionHeader = React.forwardRef(({ toggle, label, title }, ref) => {
+  const handleClick = () => {
+    toggle(label)
+    ref.current.scrollIntoView()
+  }
   return (
-    <Button type='button' onClick={handleClick}>
+    <Button ref={ref} type='button' onClick={handleClick}>
       {title}
     </Button>
   )
-}
+})
 
 const AccordionBody = ({ content }) => (
   <Content>
@@ -71,9 +74,11 @@ const AccordionBody = ({ content }) => (
 )
 
 const AccordionSection = ({ label, content, isOpen, toggle, title }) => {
+  const accordionRef = useRef(null);
+
   return (
     <SectionWrapper>
-      <AccordionHeader toggle={toggle} label={label} title={title} />
+      <AccordionHeader ref={accordionRef} toggle={toggle} label={label} title={title} />
       {isOpen && <AccordionBody isOpen={isOpen} content={content} />}
     </SectionWrapper>
   )
@@ -83,7 +88,7 @@ export default ({ data }) => {
   const [openSections, setOpenSections] = useState({})
   const isOpen = label => !!openSections[label]
 
-  const toggleSection = label => {
+  const toggleSection = (label) => {
     const open = !!openSections[label]
     setOpenSections({ [label]: !open })
   }
