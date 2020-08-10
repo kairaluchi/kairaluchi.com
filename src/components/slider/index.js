@@ -24,7 +24,7 @@ const displays = [
   },
   {
     tag: 'Welcome to Kaira Luchi',
-    title: `Solving tomorrow's challenges, today`,
+    title: 'Solving tomorrow\'s challenges, today',
     caption:
       'Using new innovations in technology to help companies solve challenging problems'
   },

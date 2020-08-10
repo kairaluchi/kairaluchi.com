@@ -75,11 +75,16 @@ const AccordionBody = ({ content }) => (
 )
 
 const AccordionSection = ({ label, content, isOpen, toggle, title }) => {
-  const accordionRef = useRef(null);
+  const accordionRef = useRef(null)
 
   return (
     <SectionWrapper>
-      <AccordionHeader ref={accordionRef} toggle={toggle} label={label} title={title} />
+      <AccordionHeader
+        ref={accordionRef}
+        toggle={toggle}
+        label={label}
+        title={title}
+      />
       {isOpen && <AccordionBody isOpen={isOpen} content={content} />}
     </SectionWrapper>
   )
@@ -89,7 +94,7 @@ export default ({ data }) => {
   const [openSections, setOpenSections] = useState({})
   const isOpen = label => !!openSections[label]
 
-  const toggleSection = (label) => {
+  const toggleSection = label => {
     const open = !!openSections[label]
     setOpenSections({ [label]: !open })
   }
