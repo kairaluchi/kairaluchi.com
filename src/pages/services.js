@@ -47,7 +47,22 @@ const data = [
     page: 'DevOps and Automation',
     path: 'devops-and-automation',
     content: `
-    <p>We have a QA team working on every project. They ensure proper protection from the very first release and specialise in the latest automation tools, which allow them to keep testing time at a minimum cost. Functional, performance, regression or any other test – we will do it for you! We are also experienced in Continuous Delivery and Continuous Integration solutions.</p>
+    <div>
+        <p>Application deployments has shifted from large-scale, project-based implementations to a continuous integration and delivery model.</p>
+        <p>Kaira Luchi’s DevOps teams makes this possible by bringing development, QA and operation teams together and applying automated processes to streamline continuous integration.</p>
+        <p>The capability to roll out new and improved application features continuously has become essential in today's digital world.</p>
+    </div>
+    <div>
+      <h3>Capabilities</h3>
+      <p>Our DevOps Capabilities includes the following.</p>
+      <ul>
+        <li>Infrastructure Management</li>
+        <li>Configuration Management</li>
+        <li>Code Inspection & Continuous Integration</li>
+        <li>Continuous Integration Testing</li>
+        <li>Deployment and Automation</li>
+      </ul>
+    </div>
     `
   },
   {
