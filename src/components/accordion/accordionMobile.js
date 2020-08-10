@@ -60,6 +60,9 @@ const AccordionHeader = React.forwardRef(({ toggle, label, title }, ref) => {
     toggle(label)
     const { current } = ref
     current.scrollIntoView({ inline: 'start', block: 'start' })
+    setTimeout(() => {
+      window.scrollBy(0,-50)
+    }, 0)
   }
   return (
     <Button ref={ref} type='button' onClick={handleClick}>
