@@ -58,7 +58,8 @@ const Content = styled.div`
 const AccordionHeader = React.forwardRef(({ toggle, label, title }, ref) => {
   const handleClick = () => {
     toggle(label)
-    ref.current.scrollIntoView()
+    const { current } = ref
+    current.scrollIntoView({ inline: 'start', block: 'start' })
   }
   return (
     <Button ref={ref} type='button' onClick={handleClick}>
