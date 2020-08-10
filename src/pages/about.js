@@ -120,7 +120,7 @@ const AboutWrapper = () => (
   <Wrapper>
     <AutoContainer>
       <TagLine>
-        Kaira Luchi LLC is a consulting firm, which strives to deliver IT
+        Kaira Luchi LLC is a consulting company, which strives to deliver IT
         solutions and business process improvements to customers worldwide. This
         is achieved through servant leadership.
       </TagLine>
@@ -186,7 +186,7 @@ const AboutWrapper = () => (
 
 const AboutPage = props => (
   <Layout page='About Us' {...props}>
-    <Seo title='About' />
+    <Seo title='About Kaira Luchi' description='Kaira Luchi Mission and Vision' />
     <AboutWrapper />
   </Layout>
 )

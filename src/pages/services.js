@@ -7,6 +7,7 @@ const data = [
   {
     page: 'Software Engineering',
     path: 'software-engineering',
+    meta: 'Software Engineering Services',
     content: `
     <div>
       <p>Adaptability is essential for navigating today’s dynamic and constantly changing world. This also means your software must be able to adapt to your constantly developing business.</p>
@@ -46,6 +47,7 @@ const data = [
   {
     page: 'DevOps and Automation',
     path: 'devops-and-automation',
+    meta: 'Devops, Automation and Continuous Integration',
     content: `
     <div>
         <p>Application deployments has shifted from large-scale, project-based implementations to a continuous integration and delivery model.</p>
@@ -68,6 +70,7 @@ const data = [
   {
     page: 'Continuous improvement',
     path: 'continuous-improvement',
+    meta: 'Lean Six Sigma and Continuous improvement',
     content: `
       <p>Collaborating with Kaira Luchi is a unique experience, filled with passion, excellence and innovation.</p>   
       <p>Continuous improvement is at the heart of what we do. Continuous improvements of processes, businesses and oneself. If there’s an opportunity for improvement, there’s a place for Kaira Luchi</p>
@@ -86,6 +89,7 @@ const data = [
   {
     page: 'Organizational Excellence',
     path: 'organizational-excellence',
+    meta: 'Organizational Excellence',
     content: `
       <p>Achieving Organizational Excellence is coveted for all businesses, and Kaira Luchi can help propel your journey to excellence through supporting, implementation and/or training in:</p>
       <ul>
@@ -100,9 +104,11 @@ const data = [
   }
 ]
 
+const meta = data.map(({ page, meta }) => ({ name: page, content: meta }))
+
 const ServicesPage = props => (
   <Layout page='Services' {...props}>
-    <Seo title='Services' />
+    <Seo title='Kaira Luchi Services' meta={meta} description='Kaira Luchi IT and Business process improvement Services' />
     <Accordion data={data} />
   </Layout>
 )
