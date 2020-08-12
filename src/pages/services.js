@@ -11,13 +11,13 @@ const data = [
     content: `
     <div>
       <p>Adaptability is essential for navigating today’s dynamic and constantly changing world. This also means your software must be able to adapt to your constantly developing business.</p>
-      <p>Our skilled and talented team will work with you to understand your needs, challenges and vision to ensure the best solution is implemented which is tailored to your Company.</p>
+      <p>Our skilled and talented team will work with you to understand your needs, challenges and vision to ensure the best solution is implemented, which is tailored to your Company.</p>
       <p>Kaira Luchi customizes a Software Development Life Cycle (SDLC) and effective Project Management methodologies such as Agile, in order to achieve the needs of our customer.</p>
     </div>
     
     <div>
       <h3>Capabilities</h3>
-      <p>Our services covers the following from development to data management, quality engineering and more.</p>
+      <p>Our services cover the following, from development to data management, quality engineering and more.</p>
     </div>
     
     <div>
@@ -35,7 +35,7 @@ const data = [
     
     <div>
       <h4>Application modernization</h4>
-      <p>Kaira Luchi will transform your legacy applications to modern systems, to ensure agility and efficiency.  Our modernization approach will enable you to get the most out of your existing solutions while reducing operating cost</p>
+      <p>Kaira Luchi will transform your legacy applications to modern systems, to ensure agility and efficiency. Our modernization approach will enable you to get the most out of your existing solutions while reducing operating cost.</p>
     </div>
     
     <div>
@@ -50,13 +50,13 @@ const data = [
     meta: 'Devops, Automation and Continuous Integration',
     content: `
     <div>
-        <p>Application deployments has shifted from large-scale, project-based implementations to a continuous integration and delivery model.</p>
-        <p>Kaira Luchi’s DevOps teams makes this possible by bringing development, QA and operation teams together and applying automated processes to streamline continuous integration.</p>
-        <p>The capability to roll out new and improved application features continuously has become essential in today's digital world.</p>
+        <p>Application deployments have shifted from large-scale, project-based implementations to a continuous integration and delivery model.</p>
+        <p>Kaira Luchi’s DevOps team makes this possible by bringing development, QA and operations teams together and applying automated processes to streamline continuous integration.</p>
+        <p>The capability to roll out new and improved application features continuously, has become essential in today's digital world.</p>
     </div>
     <div>
       <h3>Capabilities</h3>
-      <p>Our DevOps Capabilities includes the following.</p>
+      <p>Our DevOps capabilities includes the following.</p>
       <ul>
         <li>Infrastructure Management</li>
         <li>Configuration Management</li>
@@ -73,9 +73,9 @@ const data = [
     meta: 'Lean Six Sigma and Continuous improvement',
     content: `
       <p>Collaborating with Kaira Luchi is a unique experience, filled with passion, excellence and innovation.</p>   
-      <p>Continuous improvement is at the heart of what we do. Continuous improvements of processes, businesses and oneself. If there’s an opportunity for improvement, there’s a place for Kaira Luchi</p>
-      <p>Kaira Luchi supports the ongoing improvement of processes, services and products through identification and implementation of incremental and breakthrough improvements.  We achieve this by using various Project management methodologies such as Lean Six Sigma, PDCA and PMP approaches.</p>
-      <p>Through facilitation of workshops i.e Kaizens, we support businesses through Lean six sigma DMAIC approach, from defining the problem though implementation of solutions and project closure.</p>
+      <p>Continuous improvement is at the heart of what we do. Continuous improvements of processes, businesses and people. If there’s an opportunity for improvement, there’s a place for Kaira Luchi.</p>
+      <p>Kaira Luchi supports the ongoing improvement of processes, services and products through identification and implementation of incremental and breakthrough improvements.  We achieve this by using various project management methodologies such as Lean Six Sigma, PDCA and PMP approaches.</p>
+      <p>Through facilitation of workshops i.e Kaizens, we support businesses through Lean Six Sigma's DMAIC approach, from defining the problem though implementation of solutions and project closure.</p>
       <p>Our talented experts are Certified PMP and Lean Six Sigma Black Belt professionals, thus giving us the flexibility to approach each project with your business in mind.  To ensure continuous improvement of your team / employees and to enhance your continuous improvement journey, we offer training and education services including, but not limited to:</p>
       <ul>
         <li>Lean Six Sigma White, Yellow, Green and Black Belt</li>
@@ -91,7 +91,7 @@ const data = [
     path: 'organizational-excellence',
     meta: 'Organizational Excellence',
     content: `
-      <p>Achieving Organizational Excellence is coveted for all businesses, and Kaira Luchi can help propel your journey to excellence through supporting, implementation and/or training in:</p>
+      <p>Achieving Organizational Excellence is coveted by all businesses, and Kaira Luchi can help propel your journey to excellence through supporting, implementation and/or training in:</p>
       <ul>
         <li>Strategic Plan Development and Deployment</li>
         <li>Change Management</li>

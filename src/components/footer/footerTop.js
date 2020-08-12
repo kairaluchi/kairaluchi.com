@@ -23,7 +23,7 @@ const LeftColumn = ({ siteData }) => (
           <p>
             Connect with us on social media for the latest Kaira Luchi news, We
             regularly provide updates, useful tips and tricks, and upcoming
-            training and events..
+            training and events.
           </p>
           <SocialLinks className='social-links'>
             <a
@@ -106,7 +106,7 @@ const RightColumn = ({ col1, col2, action }) => (
           <h3>Subscribe</h3>
           <NewsLetter>
             <div>
-              <p>Signup for our mailing list to get latest updates and news.</p>
+              <p>Signup for our mailing list to get the latest updates and news.</p>
             </div>
             <form
               action={action}
