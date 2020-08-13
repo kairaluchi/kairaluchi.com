@@ -5,7 +5,7 @@ import Seo from '../components/seo'
 import Slider from '../components/slider'
 
 const IndexPage = props => (
-  <Layout {...props}>
+  <Layout bg='aaa' {...props}>
     <Seo title='Home' />
     <Slider />
   </Layout>
