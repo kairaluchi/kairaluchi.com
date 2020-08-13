@@ -87,8 +87,8 @@ const Privacy = () => (
           vote for election of directors or other managing authority.
         </li>
         <li>
-          Account means a unique account created for You to access our Service
-          or parts of our Service.
+          Account means a unique account created for You to access Our Service
+          or parts of Our Service.
         </li>
         <li>
           Website refers to Kaira Luchi, accessible from
@@ -156,7 +156,7 @@ const Privacy = () => (
         </li>
         <li>
           To provide You with news, special offers and general information about
-          other goods, services and events which we offer that are similar to
+          other goods, services and events which We offer that are similar to
           those that you have already purchased or enquired about unless You
           have opted not to receive such information.
         </li>
@@ -164,17 +164,17 @@ const Privacy = () => (
           To manage Your requests: To attend and manage Your requests to Us.
         </li>
       </ul>
-      <p>We may share your personal information in the following situations:</p>
+      <p>We may share Your personal information in the following situations:</p>
       <ul>
         <li>
           For Business transfers: We may share or transfer Your personal
           information in connection with, or during negotiations of, any merger,
           sale of Company assets, financing, or acquisition of all or a portion
-          of our business to another company.
+          of Our business to another company.
         </li>
         <li>
           With Affiliates: We may share Your information with Our affiliates, in
-          which case we will require those affiliates to honor this Privacy
+          which case We will require those affiliates to honor this Privacy
           Policy. Affiliates include Our parent company and any other
           subsidiaries, joint venture partners or other companies that We
           control or that are under common control with Us.
@@ -185,7 +185,7 @@ const Privacy = () => (
           promotions.
         </li>
         <li>
-          With other users: when You share personal information or otherwise
+          With other users: When You share personal information or otherwise
           interact in the public areas with other users, such information may be
           viewed by all users and may be publicly distributed outside. If You
           interact with other users or register through a Third-Party Social
@@ -197,7 +197,7 @@ const Privacy = () => (
       </ul>
       <h3>Social Networking</h3>
       <p>
-        The Sites may allow you to sign into and associate your social network
+        The Sites may allow you to sign into and associate Your social network
         accounts including, but not limited to, Twitter, LinkedIn, Facebook,
         with the Company.
       </p>
@@ -206,8 +206,8 @@ const Privacy = () => (
         The Company will retain Your Personal Data only for as long as is
         necessary for the purposes set out in this Privacy Policy. We will
         retain and use Your Personal Data to the extent necessary to comply with
-        our legal obligations (for example, if we are required to retain your
-        data to comply with applicable laws), resolve disputes, and enforce our
+        Our legal obligations (for example, if We are required to retain Your
+        data to comply with applicable laws), resolve disputes, and enforce Our
         legal agreements and policies.
       </p>
       <h3>Transfer of Your Personal Data</h3>
@@ -281,7 +281,7 @@ const Privacy = () => (
       <p>
         Under California Civil Code Section 1798 (California's Shine the Light
         law), California residents with an established business relationship
-        with us can request information once a year about sharing their Personal
+        with Us can request information once a year about sharing their Personal
         Data with third parties for the third parties' direct marketing
         purposes. If you'd like to request more information under the California
         Shine the Light law, and if you are a California resident, You can
@@ -315,7 +315,7 @@ const Privacy = () => (
         of every site You visit. We have no control over and assume no
         responsibility for the content, privacy policies or practices of any
         third party sites or services. Changes to this Privacy Policy We may
-        update our Privacy Policy from time to time. We will notify You of any
+        update Our Privacy Policy from time to time. We will notify You of any
         changes by posting the new Privacy Policy on this page. We will let You
         know via email and/or a prominent notice on Our Service, prior to the
         change becoming effective and update the "Last updated" date at the top
@@ -325,7 +325,7 @@ const Privacy = () => (
       </p>
       <h3>Contact Us</h3>
       <p>
-        If you have any questions about this Privacy Policy, You can contact us:
+        If you have any questions about this Privacy Policy, You can contact Us:
       </p>
       <ul>
         <li>By email: info@kairaluchi.com</li>
@@ -336,7 +336,7 @@ const Privacy = () => (
 
 const PrivacyPage = props => (
   <Layout page='Privacy Policy' {...props}>
-    <Seo title='Privacy Policy' />
+    <Seo title='Privacy Policy' description='privacy policy' />
     <Privacy />
   </Layout>
 )

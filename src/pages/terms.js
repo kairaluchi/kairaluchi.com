@@ -138,10 +138,10 @@ const Terms = () => (
         copied, reproduced, republished, uploaded, posted, transmitted, or
         distributed in any way, including, but not limited to, electronic,
         mechanical, photocopying, recording or otherwise, without the prior
-        written consent of the Company, except that you may download, display,
+        written consent of the Company, except that You may download, display,
         and print one copy of the materials on any single computer solely for
-        your personal, non-commercial use, provided that you do not modify the
-        material in any way and you keep intact all copyright, trademark, and
+        Your personal, non-commercial use, provided that You do not modify the
+        material in any way and You keep intact all copyright, trademark, and
         other proprietary notices.
       </p>
       <h3>Trademark</h3>
@@ -153,7 +153,7 @@ const Terms = () => (
         intellectual property displayed on the Site. The Trademarks and Trade
         Names belonging to the Company shall not be used in any way, including
         in advertising or publicity pertaining to distribution of Content on the
-        Site, without prior written permission from Us and you shall not refer
+        Site, without prior written permission from Us and You shall not refer
         to or attribute any information to the Company or its licensors in any
         public medium for promotional or advertising purposes, or otherwise, or
         for the purpose of influencing a third party.
@@ -161,18 +161,18 @@ const Terms = () => (
       <h3>Users’ Comments</h3>
       <p>
         The Company does not assume any obligation to monitor the information
-        that you may post on its website. You warrant that any information,
+        that You may post on its website. You warrant that any information,
         Materials (the term “Material” is intended to cover all projects, files
-        or other attachments sent to us) or comments other than personal data,
-        that you may transmit to the Company through the website does not
+        or other attachments sent to Us) or comments other than personal data,
+        that You may transmit to the Company through the website does not
         infringe intellectual property rights or any other applicable law. Such
         information, Materials or comments, will be treated as non-confidential
-        and non proprietary.You warrant that any information, Materials or
-        comments, that you may transmit to the Company through the website do
+        and non proprietary. You warrant that any information, Materials or
+        comments, that You may transmit to the Company through the website do
         not affect the integrity and/or the security of the website, and in
         particular, do not contain any virus, worms, Trojan horses and other
         potentially destructive programs. By submitting any information or
-        material, you give the Company an unlimited and irrevocable license to
+        material, You give the Company an unlimited and irrevocable license to
         use, copy, execute, show, display, modify and transmit such information,
         Material or comments, including any underlying idea, concept or
         know-how, in whole or in part, in any manner or medium. The Company
@@ -263,13 +263,13 @@ const Terms = () => (
         assigns (collectively, the "Indemnified Parties") from and against any
         and all liability and costs, including, without limitation, reasonable
         attorneys' fees, incurred by any or all the Indemnified Parties in
-        connection with any claim arising out of or relating to: (i) your access
-        to or use of the Site, or (ii) any breach by you of these Terms and
-        Conditions or the representations, warranties, and covenants you have
+        connection with any claim arising out of or relating to: (i) Your access
+        to or use of the Site, or (ii) any breach by You of these Terms and
+        Conditions or the representations, warranties, and covenants You have
         made by agreeing to these Terms and Conditions. You shall cooperate as
         fully as reasonably required in the defense of any such claim. The
         Company reserves the right, at its own expense, to assume the exclusive
-        defense and control of any matter subject to indemnification by you.
+        defense and control of any matter subject to indemnification by You.
       </p>
       <h3>Governing Law</h3>
       <p>
@@ -324,7 +324,7 @@ const Terms = () => (
       <h3>Contact Us</h3>
       <p>
         If you have any questions about these Terms and Conditions, You can
-        contact us:
+        contact Us:
       </p>
       <ul>
         <li>By email: info@kairaluchi.com</li>
@@ -335,7 +335,7 @@ const Terms = () => (
 
 const TermsPage = props => (
   <Layout page='Terms and Condition' {...props}>
-    <Seo title='Terms and Condition' />
+    <Seo title='Terms and Condition' description='Terms and Condition' />
     <Terms />
   </Layout>
 )
