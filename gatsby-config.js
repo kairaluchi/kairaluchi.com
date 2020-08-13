@@ -41,7 +41,9 @@ module.exports = {
       }
     },
     'gatsby-plugin-offline',
-    'gatsby-plugin-styled-components',
+    {
+      resolve: 'gatsby-plugin-styled-components'
+    },
     {
       resolve: 'gatsby-source-cloudinary',
       options: {
