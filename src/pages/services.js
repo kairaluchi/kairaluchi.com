@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from "react";
 import Layout from '../components/layout'
 import Seo from '../components/seo'
 import Accordion from '../components/accordion'
@@ -106,11 +106,15 @@ const data = [
 
 const meta = data.map(({ page, meta }) => ({ name: page, content: meta }))
 
-const ServicesPage = props => (
-  <Layout page='Services' {...props}>
-    <Seo title='Kaira Luchi Services' meta={meta} description='Kaira Luchi IT and Business process improvement Services' />
-    <Accordion data={data} />
-  </Layout>
-)
+const ServicesPage = props => {
+  const servicesRef = useRef(null)
+
+  return (
+    <Layout page='Services' {...props} >
+      <Seo title='Kaira Luchi Services' meta={meta} description='Kaira Luchi IT and Business process improvement Services' />
+      <Accordion data={data} ref={servicesRef} />
+    </Layout>
+  )
+}
 
 export default ServicesPage

@@ -6,13 +6,12 @@ import Footer from '../footer'
 import { StateProvider, useStateValue } from '../../hooks/context'
 import { reducer } from '../../hooks/reducer'
 
-import 'bootstrap/dist/css/bootstrap.min.css'
-
 const PageWrapper = styled.div`
   position: relative;
   margin: 0 auto;
   width: 100%;
   min-width: 300px;
+  background-color: #${({ bg }) => bg || 'fff' }
 `
 
 const AutoContainer = styled.div`
@@ -62,10 +61,10 @@ const PageHeader = ({ page }) => {
   )
 }
 
-const Layout = ({ children, page }) => {
+const Layout = ({ children, page, bg }) => {
   return (
     <StateProvider reducer={reducer}>
-      <PageWrapper>
+      <PageWrapper bg={bg}>
         <Header />
         <>
           {page && <PageHeader page={page} />}

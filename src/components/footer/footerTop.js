@@ -130,7 +130,7 @@ const RightColumn = ({ col1, col2, action }) => (
               <a
                 href='//www.dandb.com/verified/business/201079979/'
                 target='_blank'
-                rel='noopener noreferrer nofollow '
+                rel='nofollow noopener noreferrer'
               >
                 <img
                   src='//www.dandb.com/verified/seal/pixel/?t=201079979'

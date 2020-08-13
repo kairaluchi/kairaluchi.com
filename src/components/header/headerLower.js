@@ -6,7 +6,6 @@ import { Link } from 'gatsby'
 import { Navigation, AutoContainer, NavbarCollapse, MainMenu } from './helper'
 
 const LowerHeader = styled.div`
-  position: relative;
   left: 0px;
   top: 0px;
   width: 100%;
@@ -19,7 +18,9 @@ const LowerHeader = styled.div`
 `
 
 const NavOuter = styled.div`
-  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
 `
 
 const ToggleButton = styled.button`
@@ -27,7 +28,6 @@ const ToggleButton = styled.button`
 `
 
 const GetBtn = styled.div`
-  position: absolute;
   right: 0px;
   top: 0px;
   width: 200px;
@@ -73,9 +73,9 @@ const HeaderLower = ({ menu }) => {
   }
 
   return (
-    <LowerHeader className='header-lower'>
-      <AutoContainer className='auto-container'>
-        <NavOuter className='clearfix'>
+    <LowerHeader>
+      <AutoContainer>
+        <NavOuter>
           <MainMenu className='navbar navbar-expand-md navbar-light'>
             <ToggleButton
               className='navbar-toggler'

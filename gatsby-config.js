@@ -3,7 +3,7 @@ require('dotenv').config()
 module.exports = {
   siteMetadata: {
     title: 'Kaira Luchi',
-    description: 'Kaira Luchi LLC.',
+    description: 'Kaira Luchi | IT and Business Consulting',
     author: '@alexebube'
   },
   plugins: [
@@ -41,7 +41,9 @@ module.exports = {
       }
     },
     'gatsby-plugin-offline',
-    'gatsby-plugin-styled-components',
+    {
+      resolve: 'gatsby-plugin-styled-components'
+    },
     {
       resolve: 'gatsby-source-cloudinary',
       options: {

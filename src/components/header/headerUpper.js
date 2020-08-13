@@ -7,8 +7,7 @@ import logo from '../../images/logo.png'
 import { AutoContainer } from './helper'
 
 const UpperHeader = styled.div`
-  position: relative;
-  padding: 12px 0px;
+  padding: 30px 0px;
   background: #ffffff;
   transition: all 500ms ease;
   -moz-transition: all 500ms ease;
@@ -34,8 +33,8 @@ const Container = styled.div`
 
   div {
     :nth-child(even) {
-      margin-left: 15px;
-      margin-right: 15px;
+      margin-left: 20px;
+      margin-right: 20px;
 
       @media (max-width: 576px) {
         margin-left: 0px;
@@ -43,21 +42,26 @@ const Container = styled.div`
       }
     }
   }
+  
+  @media (max-width: 768px) {
+    margin-top: 20px;
+  }
 `
 
 const UpperColumn = styled.div`
-  position: relative;
-  padding-left: 50px;
-  padding-top: 25px;
-
+  display: flex;
+  
+  ul {
+    margin-left: 8px;
+  }
+  
   @media (max-width: 576px) {
-    width: 50%;
-    float: left;
+    // width: 50%;
+    // float: left;
   }
 
   @media (max-width: 768px) {
-    width: 50%;
-    float: left;
+    margin: auto;
   }
 
   a {
@@ -75,17 +79,9 @@ const UpperColumn = styled.div`
 `
 
 const IconBox = styled.div`
-  position: absolute;
-  left: 0px;
-  top: 10px;
-  line-height: 75px;
   color: #4a5c7a;
   font-size: 38px;
-  -moz-transition: all 500ms ease;
-  -webkit-transition: all 500ms ease;
-  -ms-transition: all 500ms ease;
-  -o-transition: all 500ms ease;
-  transition: all 500ms ease;
+  margin: auto;
 
   @media (max-width: 576px) {
     font-size: 25px;
@@ -101,7 +97,8 @@ const IconBox = styled.div`
 `
 
 const Logo = styled.div`
-  line-height: 6;
+  line-height: 6px;
+  
   @media (max-width: 768px) {
     text-align: center;
   }
