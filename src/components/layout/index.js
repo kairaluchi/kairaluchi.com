@@ -11,7 +11,7 @@ const PageWrapper = styled.div`
   margin: 0 auto;
   width: 100%;
   min-width: 300px;
-  background-color: #${({ bg }) => bg || 'ffffff' }
+  background-color: #${({ bg }) => bg || 'fff' }
 `
 
 const AutoContainer = styled.div`
