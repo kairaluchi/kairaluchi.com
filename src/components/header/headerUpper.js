@@ -85,6 +85,7 @@ const IconBox = styled.div`
 
   @media (max-width: 576px) {
     font-size: 25px;
+    display: none;
   }
 
   @media (max-width: 768px) {
