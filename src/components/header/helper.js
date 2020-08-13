@@ -2,7 +2,6 @@ import styled, { css } from 'styled-components'
 import subMenuIcon from '../../images/icons/submenu-icon.png'
 
 export const AutoContainer = styled.div`
-  position: static;
   max-width: 1200px;
   padding: 0px 15px;
   margin: 0 auto;

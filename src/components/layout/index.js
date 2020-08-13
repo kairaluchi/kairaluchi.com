@@ -6,8 +6,6 @@ import Footer from '../footer'
 import { StateProvider, useStateValue } from '../../hooks/context'
 import { reducer } from '../../hooks/reducer'
 
-import 'bootstrap/dist/css/bootstrap.min.css'
-
 const PageWrapper = styled.div`
   position: relative;
   margin: 0 auto;

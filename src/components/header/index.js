@@ -7,7 +7,6 @@ import HeaderBounce from './headerBounce'
 import { useStateValue } from '../../hooks/context'
 
 const MainHeader = styled.div`
-  position: relative;
   left: 0px;
   top: 0px;
   z-index: 999;
