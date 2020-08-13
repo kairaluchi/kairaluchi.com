@@ -335,7 +335,7 @@ const Terms = () => (
 
 const TermsPage = props => (
   <Layout page='Terms and Condition' {...props}>
-    <Seo title='Terms and Condition' />
+    <Seo title='Terms and Condition' description='Terms and Condition' />
     <Terms />
   </Layout>
 )

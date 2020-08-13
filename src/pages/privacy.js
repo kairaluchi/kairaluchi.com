@@ -336,7 +336,7 @@ const Privacy = () => (
 
 const PrivacyPage = props => (
   <Layout page='Privacy Policy' {...props}>
-    <Seo title='Privacy Policy' />
+    <Seo title='Privacy Policy' description='privacy policy' />
     <Privacy />
   </Layout>
 )
