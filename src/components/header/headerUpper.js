@@ -53,11 +53,16 @@ const UpperColumn = styled.div`
   
   ul {
     margin-left: 8px;
+    
+    li:nth-child(odd) {
+      @media (max-width: 576px) {
+        display: none;
+      }
+    }
   }
   
   @media (max-width: 576px) {
-    // width: 50%;
-    // float: left;
+    flex-direction: column;
   }
 
   @media (max-width: 768px) {
