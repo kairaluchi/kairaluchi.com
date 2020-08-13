@@ -11,6 +11,7 @@ const PageWrapper = styled.div`
   margin: 0 auto;
   width: 100%;
   min-width: 300px;
+  background-color: #${({ bg }) => bg || 'ffffff' }
 `
 
 const AutoContainer = styled.div`
@@ -60,10 +61,10 @@ const PageHeader = ({ page }) => {
   )
 }
 
-const Layout = ({ children, page }) => {
+const Layout = ({ children, page, bg }) => {
   return (
     <StateProvider reducer={reducer}>
-      <PageWrapper>
+      <PageWrapper bg={bg}>
         <Header />
         <>
           {page && <PageHeader page={page} />}
