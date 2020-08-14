@@ -11,7 +11,7 @@ const AccordionWrapper = React.forwardRef(({ data }, ref) => {
   const [, , activePath] = pathname.split('/')
   const initialPage = data.find(({ path }) => path === activePath) || data[0]
   const [show, setShow] = useState({ [initialPage.page]: true })
-  const [mobileWidth, setMobileWith] = useState(0)
+  const [mobileView, setMobileView] = useState(false)
 
   const toggle = (page, path) => {
     setShow({
@@ -22,13 +22,13 @@ const AccordionWrapper = React.forwardRef(({ data }, ref) => {
   }
 
   useEffect(() => {
-    setMobileWith(ref.current.clientWidth)
+    setMobileView(!!ref.current)
   },[ref])
 
   return (
     <Media
-      query={{ small: "(maxWidth: 768px)", }}
-      defaultMatches={mobileWidth <= 768}
+      queries={{ small: "(max-width: 768px)" }}
+      defaultMatches={{ small: mobileView }}
     >
       {matches => {
         return matches.small
