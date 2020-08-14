@@ -44,7 +44,7 @@ const Container = styled.div`
   }
   
   @media (max-width: 768px) {
-    margin-top: 20px;
+    margin-top: 30px;
   }
 `
 
@@ -54,6 +54,10 @@ const UpperColumn = styled.div`
   ul {
     margin-left: 8px;
     
+    @media (max-width: 576px) {
+      font-size: 15px;
+    }
+      
     li:nth-child(odd) {
       @media (max-width: 576px) {
         display: none;
@@ -63,6 +67,7 @@ const UpperColumn = styled.div`
   
   @media (max-width: 576px) {
     flex-direction: column;
+    margin: auto;
   }
 
   @media (max-width: 768px) {
@@ -89,7 +94,7 @@ const IconBox = styled.div`
   margin: auto;
 
   @media (max-width: 576px) {
-    font-size: 25px;
+    font-size: 22px;
   }
 
   @media (max-width: 768px) {
