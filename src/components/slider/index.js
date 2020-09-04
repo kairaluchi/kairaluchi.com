@@ -41,4 +41,4 @@ const displays = [
   }
 ]
 
-export default () => <Slider autoPlay={100} displays={displays} />
+export default () => <Slider autoPlay={5} displays={displays} />
