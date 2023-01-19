@@ -45,7 +45,7 @@ const FooterBottom = ({ menu }) => (
     <AutoContainer>
       <div className='row clearfix'>
         <div className='col-md-6 col-sm-6 col-xs-12'>
-          <div className='copyright-text'>&copy; 2020 All Rights Reserved</div>
+          <div className='copyright-text'>&copy; 2023 All Rights Reserved</div>
         </div>
         <div className='col-md-6 col-sm-6 col-xs-12'>
           <nav className='clearfix'>
