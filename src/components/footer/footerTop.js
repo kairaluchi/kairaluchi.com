@@ -126,18 +126,6 @@ const RightColumn = ({ col1, col2, action }) => (
                 <em>Your mail id is Confidential</em>
               </Confid>
             </form>
-            <div>
-              <a
-                href='//www.dandb.com/verified/business/201079979/'
-                target='_blank'
-                rel='nofollow noopener noreferrer'
-              >
-                <img
-                  src='//www.dandb.com/verified/seal/pixel/?t=201079979'
-                  alt='dandb'
-                />
-              </a>
-            </div>
           </NewsLetter>
         </div>
       </Column>
