@@ -140,8 +140,13 @@ const ContactWrapper = ({ action }) => (
               name='contact'
               netlify-honeypot='bot-field'
               data-netlify='true'
+              data-netlify-recaptcha='true'
             >
-              <input type='hidden' name='bot-field' />
+              <p hidden className="hidden">
+                <label>
+                  Don’t fill this out if you’re human: <input name="bot-field"/>
+                </label>
+              </p>
               <div className='row clearfix'>
                 <div className='form-group col-lg-6 col-md-6 col-xs-12'>
                   <FieldLabel>
@@ -174,6 +179,7 @@ const ContactWrapper = ({ action }) => (
                   <textarea name='message' />
                 </div>
               </div>
+              <div data-netlify-recaptcha="true"></div>
               <ButtonWrapper>
                 <button type='submit'>Send Message</button>
               </ButtonWrapper>
