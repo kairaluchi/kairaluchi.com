@@ -142,7 +142,7 @@ const ContactWrapper = ({ action }) => (
               data-netlify='true'
               data-netlify-recaptcha='true'
             >
-              <p className="hidden">
+              <p hidden className="hidden">
                 <label>
                   Don’t fill this out if you’re human: <input name="bot-field"/>
                 </label>
