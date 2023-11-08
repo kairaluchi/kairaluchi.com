@@ -2,7 +2,7 @@
 const formData = require('form-data');
 const Mailgun = require('mailgun.js');
 const mailgun = new Mailgun(formData);
-const mg = mailgun.client({username: 'api', key: process.env.MAILGUN_API_KEY || '0d49a25d9c6d9164f7f79fd0f563dd6f-8c9e82ec-577e7ef3'});
+const mg = mailgun.client({username: 'api', key: process.env.MAILGUN_API_KEY});
 
 const handler = async (event) => {
   try {
