@@ -18,18 +18,12 @@ const sendEmail = async (message) => {
 const handler = async (event) => {
   try {
     console.log('Event: ', event)
-    const contactMsg = JSON.parse(event.body || '{}')
-    console.log('passed body: ', contactMsg)
-    const {
-      name,
-      email,
-      message,
-      phone
-    } = contactMsg
+
+    const {html, subject} = event.queryStringParameters
     const msg = {
       "from_email": 'no-reply@nkdanceservices.com',
-      "subject": `NK Dance Services Contact Us Form: from ${[name, email, phone].join(' - ')}`,
-      "text": `${[name, email, phone].join(' ; ')}\n${message}`,
+      "subject": subject,
+      "text": html,
       "to": [{
         "email": "kaosochi@nkdanceservices.com",
         "type": "to"
@@ -44,9 +38,7 @@ const handler = async (event) => {
 
     return {
       statusCode: 200,
-      body: JSON.stringify({
-        message: res.status
-      }),
+      body: res.status,
     }
   } catch (error) {
     return {
