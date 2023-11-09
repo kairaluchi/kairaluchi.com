@@ -45,7 +45,7 @@ export const StateProvider = ({ children, reducer }) => {
 
   const slides = allCloudinaryMedia.edges.map(image => image.node.secure_url)
 
-  const defaultImage = cloudinaryMedia.secure_url
+  const defaultImage = cloudinaryMedia?.secure_url
   const siteTitle = site.siteMetadata.title
   const [siteData] = allDataJson.edges.map(item => item.node)
   const initialState = { slides, siteTitle, defaultImage, siteData }
