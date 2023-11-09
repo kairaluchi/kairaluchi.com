@@ -38,7 +38,7 @@ const handler = async (event) => {
 
     return {
       statusCode: 200,
-      body: res.status,
+      body: '',
     }
   } catch (error) {
     return {
