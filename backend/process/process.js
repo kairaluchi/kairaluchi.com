@@ -19,28 +19,33 @@ const handler = async (event) => {
   try {
     console.log('Event: ', event)
     const contactMsg = JSON.parse(event.body || '{}')
+    console.log('passed body: ', contactMsg)
     const {
-      name = '',
-      email = '',
-      message = '',
-      phone = ''
+      name,
+      email,
+      message,
+      phone
     } = contactMsg
     const msg = {
       "from_email": 'no-reply@nkdanceservices.com',
-      "subject": `NK dance services contact use from ${[name, email, phone].join(' - ')}`,
-      "text": `${[name, email, phone].join(' - ')}\n${message}`,
+      "subject": `NK Dance Services Contact Us Form: from ${[name, email, phone].join(' - ')}`,
+      "text": `${[name, email, phone].join(' ; ')}\n${message}`,
       "to": [{
         "email": "kaosochi@nkdanceservices.com",
         "type": "to"
       }]
     }
 
-    const res = await sendEmail(msg)
+    const emailResponse = await sendEmail(msg)
+    
+    console.log('emailResponse: ', emailResponse)
+
+    const [res = {}] = emailResponse
 
     return {
       statusCode: 200,
       body: JSON.stringify({
-        message: res
+        message: res.status
       }),
     }
   } catch (error) {
