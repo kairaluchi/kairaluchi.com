@@ -1,36 +1,35 @@
 const nodemailer = require('nodemailer');
 
-const sendEmailZoho = (html, subject) => {
-  try {
-    const transporter = nodemailer.createTransport({
-      host: "smtppro.zoho.com",
-      secure: true,
-      port: 465,
-      auth: {
-        user: process.env.ZOHO_EMAIL,
-        pass: process.env.ZOHO_PASSWORD
-      },
-    });
+const sendEmail = (html, subject) => {
+  const transporter = nodemailer.createTransport({
+    host: "smtppro.zoho.com",
+    secure: true,
+    port: 465,
+    auth: {
+      user: process.env.ZOHO_EMAIL,
+      pass: process.env.ZOHO_PASSWORD
+    },
+  });
 
-    console.log('nodemailer transporter: ', transporter)
+  console.log('nodeMailer transporter: ', transporter)
 
-    const mailOptions = {
-      from: "no-reply@nkdanceservices.com",
-      to: "kaosochi@nkdanceservices.com",
-      subject,
-      html,
-    };
+  const mailOptions = {
+    from: "no-reply@nkdanceservices.com",
+    to: "kaosochi@nkdanceservices.com",
+    subject,
+    html,
+  };
 
-
+  return new Promise((resolve, reject) => {
     transporter.sendMail(mailOptions, (err, info) => {
       if (err) {
         console.log('Zoho ERROR', err)
+        return reject(err)
       }
       console.log('Zoho Info: ', info)
+      return resolve(info)
     })
-  } catch (error) {
-    console.log('Zoho ERROR', error)
-  }
+  })
 }
 
 const handler = async (event) => {
@@ -42,13 +41,15 @@ const handler = async (event) => {
       subject
     } = event.queryStringParameters
 
-    sendEmailZoho(html, subject)
+    const response = await sendEmail(html, subject)
+    console.log('RESPONSE: ', response)
 
     return {
       statusCode: 200,
       body: '',
     }
   } catch (error) {
+    console.log('ERROR: ', error)
     return {
       statusCode: 500,
       body: error.toString()
