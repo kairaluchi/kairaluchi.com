@@ -1,59 +1,49 @@
-const nodeMailer = require('nodemailer');
-const mailchimpClient = require("@mailchimp/mailchimp_transactional")(
-  process.env.MAILCHIMP_API_KEY
-);
+const nodemailer = require('nodemailer');
 
-const sendEmailZoho = async (html, subject) => {
-  let transporter = nodeMailer.createTransport({
-    host: "smtppro.zoho.com",
-    secure: true,
-    port: 465,
-    auth: {
-      user: process.env.ZOHO_EMAIL,
-      pass: process.env.ZOHO_PASSWORD
-    },
-  });
+const sendEmailZoho = (html, subject) => {
+  try {
+    const transporter = nodemailer.createTransport({
+      host: "smtppro.zoho.com",
+      secure: true,
+      port: 465,
+      auth: {
+        user: process.env.ZOHO_EMAIL,
+        pass: process.env.ZOHO_PASSWORD
+      },
+    });
 
-  const mailOptions = {
-    from: "no-reply@nkdanceservices.com",
-    to: "kaosochi@nkdanceservices.com",
-    subject,
-    html,
-   };
+    console.log('nodemailer transporter: ', transporter)
 
-   try {
-    await transporter.sendMail(mailOptions, function(err, info) {
+    const mailOptions = {
+      from: "no-reply@nkdanceservices.com",
+      to: "kaosochi@nkdanceservices.com",
+      subject,
+      html,
+    };
+
+
+    transporter.sendMail(mailOptions, (err, info) => {
       if (err) {
         console.log('Zoho ERROR', err)
       }
       console.log('Zoho Info: ', info)
     })
-   } catch (error) {
-    console.log('Zoho ERROR', error)
-   }
-}
-
-const sendEmail = async (message) => {
-  try {
-    const response = await mailchimpClient.messages.send({
-      message
-    });
-    console.log(response);
-    return response
   } catch (error) {
-    console.error('sendEmail: ', error)
-    return null
+    console.log('Zoho ERROR', error)
   }
-};
+}
 
 const handler = async (event) => {
   try {
     console.log('Event: ', event)
 
-    const {html, subject} = event.queryStringParameters
+    const {
+      html,
+      subject
+    } = event.queryStringParameters
 
-    await sendEmailZoho(html, subject)
-    
+    sendEmailZoho(html, subject)
+
     return {
       statusCode: 200,
       body: '',
