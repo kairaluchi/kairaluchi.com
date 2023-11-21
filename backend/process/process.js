@@ -14,8 +14,8 @@ const sendEmail = (html, subject) => {
   console.log('nodeMailer transporter: ', transporter)
 
   const mailOptions = {
-    from: "no-reply@nkdanceservices.com",
-    to: "kaosochi@nkdanceservices.com",
+    from: process.env.ZOHO_EMAIL,
+    to: process.env.ZOHO_EMAIL,
     subject,
     html,
   };
