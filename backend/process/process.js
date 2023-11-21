@@ -1,8 +1,8 @@
-const nodeMailer = require('nodemailer');
+const nodemailer = require('nodemailer');
 
 const sendEmailZoho = (html, subject) => {
   try {
-    const transporter = nodeMailer.createTransport({
+    const transporter = nodemailer.createTransport({
       host: "smtppro.zoho.com",
       secure: true,
       port: 465,
@@ -12,7 +12,7 @@ const sendEmailZoho = (html, subject) => {
       },
     });
 
-    console.log('nodeMailer transporter: ', transporter)
+    console.log('nodemailer transporter: ', transporter)
 
     const mailOptions = {
       from: "no-reply@nkdanceservices.com",
